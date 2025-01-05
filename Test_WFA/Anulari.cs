@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Test_WFA
 {
-    internal class Anulari
+    class Anulari
     {
+
     }
 }

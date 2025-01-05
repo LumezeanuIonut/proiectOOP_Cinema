@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Test_WFA
 {
-    public partial class Form1 : Form
+    public partial class FormRezervare : Form
     {
-        public Form1()
+        public FormRezervare()
         {
             InitializeComponent();
         }
@@ -26,10 +26,11 @@ namespace Test_WFA
         {
 
         }
+        
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            string nume = NumeText.Text;
+            /*string nume = NumeText.Text;
             string prenume = PrenumeText.Text;
             string selected="";
             foreach(RadioButton rb in gb_TipBilet.Controls)
@@ -41,10 +42,29 @@ namespace Test_WFA
             }
             Console.WriteLine("Nume: " + nume);
             Console.WriteLine("Prenume: " + prenume);
-            Console.WriteLine("Tip bilet: " + selected);
+            Console.WriteLine("Tip bilet: " + selected);*/
+            Rezervari rezervareTest = new Rezervari("client", "Actiune", new DateTime(2025, 05, 02), new DateTime(2025, 05, 03), 7);
+            List<Rezervari> rezervari = new List<Rezervari>();
+            int index = 0;
+            rezervareTest.Afisare_rezervare();
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormRezervare_Load(object sender, EventArgs e)
         {
 
         }
