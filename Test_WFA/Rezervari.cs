@@ -10,16 +10,14 @@ namespace Test_WFA
     class Rezervari:IRezervari
     {
 
-        //dupa ce sunt facute clasele Film si Client trebuie modificat tipul variabilelor 
-        private string client { get; set; }
+        //dupa ce este facuta clasa Film trebuie modificat tipul variabilei
         private string film { get; set; }
         private DateTime inceputRezervare { get; set; }
         private DateTime sfarsitRezervare { get; set; }
         private int durata { get; set; }
 
-        public Rezervari(string _client, string _film, DateTime _inceputRezervare, DateTime _sfarsitRezervare, int _durata)
+        public Rezervari(string _film, DateTime _inceputRezervare, DateTime _sfarsitRezervare, int _durata)
         {   
-            client = _client; 
             film = _film;
             inceputRezervare = _inceputRezervare;
             sfarsitRezervare = _sfarsitRezervare;
@@ -28,7 +26,6 @@ namespace Test_WFA
         }
        public void Afisare_rezervare()
        {
-            Console.WriteLine("Tip client: " + client);
             Console.WriteLine("Genul filmului: " + film);
             Console.WriteLine("Data inceput: " + inceputRezervare);
             Console.WriteLine("Data sfarsit: " + sfarsitRezervare);
