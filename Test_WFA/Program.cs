@@ -16,7 +16,7 @@ namespace Test_WFA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormRezervare());
+            Application.Run(new FormUserLog());
 
             
         }

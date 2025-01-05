@@ -30,23 +30,21 @@ namespace Test_WFA
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            /*string nume = NumeText.Text;
-            string prenume = PrenumeText.Text;
-            string selected="";
-            foreach(RadioButton rb in gb_TipBilet.Controls)
+            string durata = textDurata.Text;
+            string selected = "";
+            string dataIncep = dateTimePicker1.Text;
+            string dataSfarsit= dateTimePicker2.Text;
+            foreach (RadioButton rb in gb_TipBilet.Controls)
             {
-                if(rb.Checked)
+                if (rb.Checked)
                 {
                     selected = rb.Text;
                 }
             }
-            Console.WriteLine("Nume: " + nume);
-            Console.WriteLine("Prenume: " + prenume);
-            Console.WriteLine("Tip bilet: " + selected);*/
-            Rezervari rezervareTest = new Rezervari("client", "Actiune", new DateTime(2025, 05, 02), new DateTime(2025, 05, 03), 7);
             List<Rezervari> rezervari = new List<Rezervari>();
+            Rezervari rezervare1 = new Rezervari(selected ,Convert.ToDateTime(dataIncep), Convert.ToDateTime(dataIncep),Convert.ToInt32(durata));
+            rezervare1.Afisare_rezervare();
             int index = 0;
-            rezervareTest.Afisare_rezervare();
         }
 
         private void button1_Click(object sender, EventArgs e)
