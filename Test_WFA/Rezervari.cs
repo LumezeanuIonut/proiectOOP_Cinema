@@ -26,11 +26,16 @@ namespace Test_WFA
             durata = _durata;
 
         }
-        public void Adaugare_rezervare(List<Rezervari> rez)
-        {
-
+       public void Afisare_rezervare()
+       {
+            Console.WriteLine("Tip client: " + client);
+            Console.WriteLine("Genul filmului: " + film);
+            Console.WriteLine("Data inceput: " + inceputRezervare);
+            Console.WriteLine("Data sfarsit: " + sfarsitRezervare);
+            Console.WriteLine("Durata: " + durata);
+            Console.WriteLine("Taxe: " + Calculator_taxe());
+            Console.WriteLine("Pret final: " + Pret_Final());
         }
-
         public int Calculator_taxe()
         {
             var x = 0;

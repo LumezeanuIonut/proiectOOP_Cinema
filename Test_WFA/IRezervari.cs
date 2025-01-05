@@ -8,7 +8,7 @@ namespace Test_WFA
 {
     interface IRezervari
     {
-        void Adaugare_rezervare(List<Rezervari> rez);
+        void Afisare_rezervare();
         int Calculator_taxe();
         int Pret_Final();
     }
