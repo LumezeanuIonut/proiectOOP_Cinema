@@ -93,6 +93,7 @@
             this.MaximizeBox = false;
             this.Name = "FormUserLog";
             this.Text = "UserLogForm";
+            this.Load += new System.EventHandler(this.FormUserLog_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

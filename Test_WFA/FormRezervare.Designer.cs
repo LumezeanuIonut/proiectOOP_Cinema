@@ -33,10 +33,10 @@
             this.OKButton = new System.Windows.Forms.Button();
             this.gb_TipBilet = new System.Windows.Forms.GroupBox();
             this.gb_DataRez = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dataInceputLabel = new System.Windows.Forms.Label();
             this.dataFinalizariiLabel = new System.Windows.Forms.Label();
+            this.dataInceputLabel = new System.Windows.Forms.Label();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.durataLabel = new System.Windows.Forms.Label();
             this.textDurata = new System.Windows.Forms.TextBox();
             this.TitluRezervare = new System.Windows.Forms.Label();
@@ -101,12 +101,24 @@
             this.gb_DataRez.TabStop = false;
             this.gb_DataRez.Text = "Data rezervare";
             // 
-            // dateTimePicker1
+            // dataFinalizariiLabel
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(134, 27);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(388, 22);
-            this.dateTimePicker1.TabIndex = 0;
+            this.dataFinalizariiLabel.AutoSize = true;
+            this.dataFinalizariiLabel.Location = new System.Drawing.Point(15, 69);
+            this.dataFinalizariiLabel.Name = "dataFinalizariiLabel";
+            this.dataFinalizariiLabel.Size = new System.Drawing.Size(90, 16);
+            this.dataFinalizariiLabel.TabIndex = 3;
+            this.dataFinalizariiLabel.Text = "Data finalizarii";
+            this.dataFinalizariiLabel.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // dataInceputLabel
+            // 
+            this.dataInceputLabel.AutoSize = true;
+            this.dataInceputLabel.Location = new System.Drawing.Point(15, 33);
+            this.dataInceputLabel.Name = "dataInceputLabel";
+            this.dataInceputLabel.Size = new System.Drawing.Size(90, 16);
+            this.dataInceputLabel.TabIndex = 2;
+            this.dataInceputLabel.Text = "Data inceperii";
             // 
             // dateTimePicker2
             // 
@@ -115,24 +127,12 @@
             this.dateTimePicker2.Size = new System.Drawing.Size(388, 22);
             this.dateTimePicker2.TabIndex = 1;
             // 
-            // dataInceputLabel
+            // dateTimePicker1
             // 
-            this.dataInceputLabel.AutoSize = true;
-            this.dataInceputLabel.Location = new System.Drawing.Point(15, 33);
-            this.dataInceputLabel.Name = "dataInceputLabel";
-            this.dataInceputLabel.Size = new System.Drawing.Size(113, 20);
-            this.dataInceputLabel.TabIndex = 2;
-            this.dataInceputLabel.Text = "Data inceperii";
-            // 
-            // dataFinalizariiLabel
-            // 
-            this.dataFinalizariiLabel.AutoSize = true;
-            this.dataFinalizariiLabel.Location = new System.Drawing.Point(15, 69);
-            this.dataFinalizariiLabel.Name = "dataFinalizariiLabel";
-            this.dataFinalizariiLabel.Size = new System.Drawing.Size(113, 20);
-            this.dataFinalizariiLabel.TabIndex = 3;
-            this.dataFinalizariiLabel.Text = "Data finalizarii";
-            this.dataFinalizariiLabel.Click += new System.EventHandler(this.label2_Click);
+            this.dateTimePicker1.Location = new System.Drawing.Point(134, 27);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(388, 22);
+            this.dateTimePicker1.TabIndex = 0;
             // 
             // durataLabel
             // 
@@ -174,7 +174,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "FormRezervare";
-            this.Text = "Form1";
+            this.Text = "RezervareForm";
             this.Load += new System.EventHandler(this.FormRezervare_Load);
             this.gb_TipBilet.ResumeLayout(false);
             this.gb_TipBilet.PerformLayout();

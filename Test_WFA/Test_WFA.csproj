@@ -65,6 +65,12 @@
     <Compile Include="FormClient.Designer.cs">
       <DependentUpon>FormClient.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormModificareRez.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModificareRez.Designer.cs">
+      <DependentUpon>FormModificareRez.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormRezervare.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormClient.resx">
       <DependentUpon>FormClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModificareRez.resx">
+      <DependentUpon>FormModificareRez.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRezervare.resx">
       <DependentUpon>FormRezervare.cs</DependentUpon>

@@ -28,70 +28,73 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.VizButton = new System.Windows.Forms.Button();
+            this.CreateButton = new System.Windows.Forms.Button();
+            this.ModifyButton = new System.Windows.Forms.Button();
+            this.CancelButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // VizButton
             // 
-            this.button1.Location = new System.Drawing.Point(25, 123);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(739, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Vizualizare filme pentru inchiriat";
-            this.button1.UseVisualStyleBackColor = true;
+            this.VizButton.Location = new System.Drawing.Point(25, 123);
+            this.VizButton.Name = "VizButton";
+            this.VizButton.Size = new System.Drawing.Size(739, 23);
+            this.VizButton.TabIndex = 0;
+            this.VizButton.Text = "Vizualizare filme pentru inchiriat";
+            this.VizButton.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // CreateButton
             // 
-            this.button2.Location = new System.Drawing.Point(25, 180);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(739, 23);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Creare rezervare";
-            this.button2.UseVisualStyleBackColor = true;
+            this.CreateButton.Location = new System.Drawing.Point(25, 180);
+            this.CreateButton.Name = "CreateButton";
+            this.CreateButton.Size = new System.Drawing.Size(739, 23);
+            this.CreateButton.TabIndex = 0;
+            this.CreateButton.Text = "Creare rezervare";
+            this.CreateButton.UseVisualStyleBackColor = true;
+            this.CreateButton.Click += new System.EventHandler(this.CreateButton_Click);
             // 
-            // button3
+            // ModifyButton
             // 
-            this.button3.Location = new System.Drawing.Point(25, 237);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(739, 23);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Modificare rezervare";
-            this.button3.UseVisualStyleBackColor = true;
+            this.ModifyButton.Location = new System.Drawing.Point(25, 237);
+            this.ModifyButton.Name = "ModifyButton";
+            this.ModifyButton.Size = new System.Drawing.Size(739, 23);
+            this.ModifyButton.TabIndex = 0;
+            this.ModifyButton.Text = "Modificare rezervare";
+            this.ModifyButton.UseVisualStyleBackColor = true;
+            this.ModifyButton.Click += new System.EventHandler(this.ModifyButton_Click);
             // 
-            // button4
+            // CancelButton
             // 
-            this.button4.Location = new System.Drawing.Point(25, 289);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(739, 23);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "Anulare rezervare";
-            this.button4.UseVisualStyleBackColor = true;
+            this.CancelButton.Location = new System.Drawing.Point(25, 289);
+            this.CancelButton.Name = "CancelButton";
+            this.CancelButton.Size = new System.Drawing.Size(739, 23);
+            this.CancelButton.TabIndex = 0;
+            this.CancelButton.Text = "Anulare rezervare";
+            this.CancelButton.UseVisualStyleBackColor = true;
             // 
             // FormClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.CancelButton);
+            this.Controls.Add(this.ModifyButton);
+            this.Controls.Add(this.CreateButton);
+            this.Controls.Add(this.VizButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "FormClient";
             this.Text = "FormClient";
+            this.Load += new System.EventHandler(this.FormClient_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button VizButton;
+        private System.Windows.Forms.Button CreateButton;
+        private System.Windows.Forms.Button ModifyButton;
+        private System.Windows.Forms.Button CancelButton;
     }
 }

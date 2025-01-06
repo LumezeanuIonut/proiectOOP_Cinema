@@ -11,14 +11,16 @@ namespace Test_WFA
     {
 
         //dupa ce este facuta clasa Film trebuie modificat tipul variabilei
-        private string film { get; set; }
-        private DateTime inceputRezervare { get; set; }
-        private DateTime sfarsitRezervare { get; set; }
-        private int durata { get; set; }
+        public string film { get; set; }
+        public string genFilm { get; set; }
+        public DateTime inceputRezervare { get; set; }
+        public DateTime sfarsitRezervare { get; set; }
+        public int durata { get; set; }
 
-        public Rezervari(string _film, DateTime _inceputRezervare, DateTime _sfarsitRezervare, int _durata)
+        public Rezervari(string _film, string _genFilm, DateTime _inceputRezervare, DateTime _sfarsitRezervare, int _durata)
         {   
             film = _film;
+            genFilm = _genFilm;
             inceputRezervare = _inceputRezervare;
             sfarsitRezervare = _sfarsitRezervare;
             durata = _durata;
@@ -26,12 +28,8 @@ namespace Test_WFA
         }
        public void Afisare_rezervare()
        {
-            Console.WriteLine("Genul filmului: " + film);
-            Console.WriteLine("Data inceput: " + inceputRezervare);
-            Console.WriteLine("Data sfarsit: " + sfarsitRezervare);
-            Console.WriteLine("Durata: " + durata);
-            Console.WriteLine("Taxe: " + Calculator_taxe());
-            Console.WriteLine("Pret final: " + Pret_Final());
+            MessageBox.Show("Genul filmului: " + film + "\nData inceput: " + inceputRezervare + "\nData sfarsit: " + sfarsitRezervare + "\nDurata: " + durata + "\nTaxe: " + Calculator_taxe() + "\nPret final: " + Pret_Final());
+            
         }
         public int Calculator_taxe()
         {
@@ -41,7 +39,7 @@ namespace Test_WFA
             if (film == "Actiune" && durata > 3)
             {
                 MessageBox.Show("Rezervarile pentru filmele de actiune se pot face pe maxim 3 zile!");
-                throw new Exception("Durata rezervare depasita!");
+                Console.WriteLine("Durata rezervare depasita!");
             }
             else
                 x = 20 * durata;
@@ -50,7 +48,7 @@ namespace Test_WFA
             if (film == "Drama" && durata > 7)
             {
                 MessageBox.Show("Rezervarile pentru filmele de drama se pot face pe maxim 7 zile!");
-                throw new Exception("Durata rezervare depasita!");
+                Console.WriteLine("Durata rezervare depasita!");
             }
             else x = 15 * durata;
 

@@ -115,7 +115,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(867, 494);
+            this.ClientSize = new System.Drawing.Size(836, 484);
             this.Controls.Add(this.clientWinButton);
             this.Controls.Add(this.totWinButton);
             this.Controls.Add(this.clientRezHistButton);
@@ -124,7 +124,7 @@
             this.Controls.Add(this.modifyButton);
             this.Controls.Add(this.remFilmButton);
             this.Controls.Add(this.addFilmButton);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "FormAdmin";
             this.Text = "FormMenu";
