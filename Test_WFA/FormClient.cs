@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using System.IO;
 namespace Test_WFA
 {
     public partial class FormClient : Form
     {
+        
         public FormClient()
         {
             InitializeComponent();
@@ -20,6 +22,24 @@ namespace Test_WFA
         private void addFilmButton_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void CreateButton_Click(object sender, EventArgs e)
+        {
+            FormRezervare rezervare = new FormRezervare();
+            rezervare.ShowDialog();
+            this.Close();
+        }
+
+        private void ModifyButton_Click(object sender, EventArgs e)
+        {
+            FormModificareRez modRezervare = new FormModificareRez();
+            modRezervare.ShowDialog();
+        }
+
+        private void FormClient_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

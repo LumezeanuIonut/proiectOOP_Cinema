@@ -82,5 +82,10 @@ namespace Test_WFA
                 MessageBox.Show("Parola sau user gresit!");
             }
         }
+
+        private void FormUserLog_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

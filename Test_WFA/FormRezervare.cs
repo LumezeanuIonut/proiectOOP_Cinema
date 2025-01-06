@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Test_WFA
 {
     public partial class FormRezervare : Form
     {
+        string rezervariPath = @"C:\Users\40767\Desktop\an2\poo\OOP_Project_Cinema\Test_WFA\TxtFiles\Rezervari.txt";
         public FormRezervare()
         {
             InitializeComponent();
@@ -30,6 +32,7 @@ namespace Test_WFA
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
+            StreamWriter sw = new StreamWriter(rezervariPath);
             string durata = textDurata.Text;
             string selected = "";
             string dataIncep = dateTimePicker1.Text;
@@ -41,10 +44,14 @@ namespace Test_WFA
                     selected = rb.Text;
                 }
             }
-            List<Rezervari> rezervari = new List<Rezervari>();
-            Rezervari rezervare1 = new Rezervari(selected ,Convert.ToDateTime(dataIncep), Convert.ToDateTime(dataIncep),Convert.ToInt32(durata));
-            rezervare1.Afisare_rezervare();
-            int index = 0;
+            Rezervari rezervare1 = new Rezervari("Nasul",selected ,Convert.ToDateTime(dataIncep), Convert.ToDateTime(dataIncep),Convert.ToInt32(durata));
+            //adaugarea rezervarii in fisierul text Rezervari.txt
+            if(rezervare1.Calculator_taxe() != 0)
+            {
+                rezervare1.Afisare_rezervare();
+                sw.Write(rezervare1.film + ',' + rezervare1.genFilm + ',' + Convert.ToString(rezervare1.inceputRezervare) + ',' + Convert.ToString(rezervare1.sfarsitRezervare) + ',' + Convert.ToString(rezervare1.durata));
+                sw.Close();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
