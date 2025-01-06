@@ -8,5 +8,5 @@ namespace CinemaManagementSystem.Models
         }
         public override int GetNumarMaximZileRezervare() => 7;
     }
-    // public class FilmDrama : Film
+    // public class FilmDrama : Film.
 }

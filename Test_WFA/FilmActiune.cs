@@ -9,5 +9,5 @@ namespace CinemaManagementSystem.Models
 
         public override int GetNumarMaximZileRezervare() => 3;
     }
-    // public class FilmActiune : Film
+    // public class FilmActiune : Film.
 }
