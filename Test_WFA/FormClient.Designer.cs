@@ -28,24 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.VizButton = new System.Windows.Forms.Button();
             this.CreateButton = new System.Windows.Forms.Button();
             this.ModifyButton = new System.Windows.Forms.Button();
             this.CancelButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // VizButton
-            // 
-            this.VizButton.Location = new System.Drawing.Point(25, 123);
-            this.VizButton.Name = "VizButton";
-            this.VizButton.Size = new System.Drawing.Size(739, 23);
-            this.VizButton.TabIndex = 0;
-            this.VizButton.Text = "Vizualizare filme pentru inchiriat";
-            this.VizButton.UseVisualStyleBackColor = true;
-            // 
             // CreateButton
             // 
-            this.CreateButton.Location = new System.Drawing.Point(25, 180);
+            this.CreateButton.Location = new System.Drawing.Point(33, 137);
             this.CreateButton.Name = "CreateButton";
             this.CreateButton.Size = new System.Drawing.Size(739, 23);
             this.CreateButton.TabIndex = 0;
@@ -55,7 +45,7 @@
             // 
             // ModifyButton
             // 
-            this.ModifyButton.Location = new System.Drawing.Point(25, 237);
+            this.ModifyButton.Location = new System.Drawing.Point(33, 194);
             this.ModifyButton.Name = "ModifyButton";
             this.ModifyButton.Size = new System.Drawing.Size(739, 23);
             this.ModifyButton.TabIndex = 0;
@@ -65,7 +55,7 @@
             // 
             // CancelButton
             // 
-            this.CancelButton.Location = new System.Drawing.Point(25, 289);
+            this.CancelButton.Location = new System.Drawing.Point(33, 246);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(739, 23);
             this.CancelButton.TabIndex = 0;
@@ -80,7 +70,6 @@
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.ModifyButton);
             this.Controls.Add(this.CreateButton);
-            this.Controls.Add(this.VizButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "FormClient";
@@ -91,8 +80,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button VizButton;
         private System.Windows.Forms.Button CreateButton;
         private System.Windows.Forms.Button ModifyButton;
         private System.Windows.Forms.Button CancelButton;

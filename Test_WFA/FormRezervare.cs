@@ -14,44 +14,57 @@ namespace Test_WFA
     public partial class FormRezervare : Form
     {
         string rezervariPath = @"C:\Users\40767\Desktop\an2\poo\OOP_Project_Cinema\Test_WFA\TxtFiles\Rezervari.txt";
+        string filmPath = @"C:\Users\40767\Desktop\an2\poo\OOP_Project_Cinema\Test_WFA\TxtFiles\Filme.txt";
+
         public FormRezervare()
         {
             InitializeComponent();
+            SetUpAutoComplete(filmPath);
         }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            StreamWriter sw = new StreamWriter(rezervariPath);
-            string durata = textDurata.Text;
-            string selected = "";
-            string dataIncep = dateTimePicker1.Text;
-            string dataSfarsit= dateTimePicker2.Text;
-            foreach (RadioButton rb in gb_TipBilet.Controls)
+            using (StreamWriter sw = new StreamWriter(rezervariPath, true)) 
             {
-                if (rb.Checked)
+                if (File.Exists(filmPath))
                 {
-                    selected = rb.Text;
+                    string titlu = "";
+                    string gen = "";
+                    string regizor = "";
+                    string anLansare = "";
+                    string durata = "";
+                    var splitLine = film_tb.Text.Split(',');
+                    if (splitLine.Length == 5)
+                    {
+                        titlu = splitLine[0];
+                        gen = splitLine[1];
+                        regizor = splitLine[2];
+                        anLansare = splitLine[3];
+                        durata = splitLine[4];
+                    }
+
+                    string dataIncep = dateTimePicker1.Text;
+                    string dataSfarsit = dateTimePicker2.Text;
+                    Film film = new Film(titlu, gen, regizor, Convert.ToInt32(anLansare), Convert.ToInt32(durata));
+                    Rezervari rezervare1 = new Rezervari(film.Titlu, film.Gen, Convert.ToDateTime(dataIncep), Convert.ToDateTime(dataIncep), film.Durata);
+
+                        rezervare1.Afisare_rezervare();
+                        sw.WriteLine(film.Titlu + ',' + film.Gen + ',' + Convert.ToString(rezervare1.inceputRezervare) + ',' + Convert.ToString(rezervare1.sfarsitRezervare) + ',' + Convert.ToString(film.Durata));
+                    
                 }
             }
-            Rezervari rezervare1 = new Rezervari("Nasul",selected ,Convert.ToDateTime(dataIncep), Convert.ToDateTime(dataIncep),Convert.ToInt32(durata));
-            //adaugarea rezervarii in fisierul text Rezervari.txt
-            if(rezervare1.Calculator_taxe() != 0)
-            {
-                rezervare1.Afisare_rezervare();
-                sw.Write(rezervare1.film + ',' + rezervare1.genFilm + ',' + Convert.ToString(rezervare1.inceputRezervare) + ',' + Convert.ToString(rezervare1.sfarsitRezervare) + ',' + Convert.ToString(rezervare1.durata));
-                sw.Close();
-            }
+        }
+
+        private void SetUpAutoComplete(string filmPath)
+        {
+            var lines = File.ReadLines(filmPath);
+
+            AutoCompleteStringCollection autoCompleteData = new AutoCompleteStringCollection();
+            autoCompleteData.AddRange(lines.ToArray());
+
+            film_tb.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            film_tb.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            film_tb.AutoCompleteCustomSource = autoCompleteData;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -70,6 +83,16 @@ namespace Test_WFA
         }
 
         private void FormRezervare_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gb_DataRez_Enter(object sender, EventArgs e)
         {
 
         }

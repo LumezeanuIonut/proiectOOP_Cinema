@@ -47,6 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Anulari.cs" />
+    <Compile Include="Film.cs" />
+    <Compile Include="FilmActiune.cs" />
+    <Compile Include="FilmDrama.cs" />
     <Compile Include="FormAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
