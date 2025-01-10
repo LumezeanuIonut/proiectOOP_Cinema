@@ -1,8 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace CinemaManagementSystem.Models
+namespace Test_WFA
 {
-    public abstract class Film
+    class Film
     {
         // Câmpuri private
         private string _titlu;
@@ -25,8 +29,11 @@ namespace CinemaManagementSystem.Models
             set => _esteDisponibil = value;
         }
 
+        public Film()
+        {
 
-        protected Film(string titlu, string regizor, string gen, int anLansare, int durata)
+        }
+        public Film(string titlu, string regizor, string gen, int anLansare, int durata)
         {
             if (string.IsNullOrWhiteSpace(titlu))
                 throw new ArgumentException("Titlul nu poate fi gol.");
@@ -53,6 +60,8 @@ namespace CinemaManagementSystem.Models
             _esteDisponibil = true;
         }
 
-        public abstract int GetNumarMaximZileRezervare();
+        public int GetNumarMaximZileRezervare() {
+            return 1;
+        }
     }
 }

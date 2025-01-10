@@ -28,7 +28,6 @@ namespace Test_WFA
         {
             FormRezervare rezervare = new FormRezervare();
             rezervare.ShowDialog();
-            this.Close();
         }
 
         private void ModifyButton_Click(object sender, EventArgs e)

@@ -31,19 +31,15 @@
             this.ModifyRezTitle = new System.Windows.Forms.Label();
             this.modRez_tb = new System.Windows.Forms.TextBox();
             this.modRezLabel = new System.Windows.Forms.Label();
-            this.textDurata = new System.Windows.Forms.TextBox();
-            this.durataLabel = new System.Windows.Forms.Label();
             this.gb_DataRez = new System.Windows.Forms.GroupBox();
             this.dataFinalizariiLabel = new System.Windows.Forms.Label();
             this.dataInceputLabel = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.modrez_dtp2 = new System.Windows.Forms.DateTimePicker();
+            this.modrez_dtp1 = new System.Windows.Forms.DateTimePicker();
             this.OKButton = new System.Windows.Forms.Button();
-            this.gb_TipBilet = new System.Windows.Forms.GroupBox();
-            this.BiletActiune = new System.Windows.Forms.RadioButton();
-            this.BiletDrama = new System.Windows.Forms.RadioButton();
+            this.modify_label = new System.Windows.Forms.Label();
+            this.modif_tb = new System.Windows.Forms.TextBox();
             this.gb_DataRez.SuspendLayout();
-            this.gb_TipBilet.SuspendLayout();
             this.SuspendLayout();
             // 
             // ModifyRezTitle
@@ -68,34 +64,18 @@
             this.modRezLabel.AutoSize = true;
             this.modRezLabel.Location = new System.Drawing.Point(66, 102);
             this.modRezLabel.Name = "modRezLabel";
-            this.modRezLabel.Size = new System.Drawing.Size(144, 20);
+            this.modRezLabel.Size = new System.Drawing.Size(115, 16);
             this.modRezLabel.TabIndex = 2;
             this.modRezLabel.Text = "Alegere rezervare";
             this.modRezLabel.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // textDurata
-            // 
-            this.textDurata.Location = new System.Drawing.Point(216, 151);
-            this.textDurata.Name = "textDurata";
-            this.textDurata.Size = new System.Drawing.Size(200, 22);
-            this.textDurata.TabIndex = 11;
-            // 
-            // durataLabel
-            // 
-            this.durataLabel.AutoSize = true;
-            this.durataLabel.Location = new System.Drawing.Point(66, 157);
-            this.durataLabel.Name = "durataLabel";
-            this.durataLabel.Size = new System.Drawing.Size(105, 16);
-            this.durataLabel.TabIndex = 10;
-            this.durataLabel.Text = "Durata rezervarii";
             // 
             // gb_DataRez
             // 
             this.gb_DataRez.Controls.Add(this.dataFinalizariiLabel);
             this.gb_DataRez.Controls.Add(this.dataInceputLabel);
-            this.gb_DataRez.Controls.Add(this.dateTimePicker2);
-            this.gb_DataRez.Controls.Add(this.dateTimePicker1);
-            this.gb_DataRez.Location = new System.Drawing.Point(70, 301);
+            this.gb_DataRez.Controls.Add(this.modrez_dtp2);
+            this.gb_DataRez.Controls.Add(this.modrez_dtp1);
+            this.gb_DataRez.Location = new System.Drawing.Point(69, 279);
             this.gb_DataRez.Name = "gb_DataRez";
             this.gb_DataRez.Size = new System.Drawing.Size(549, 97);
             this.gb_DataRez.TabIndex = 14;
@@ -120,19 +100,19 @@
             this.dataInceputLabel.TabIndex = 2;
             this.dataInceputLabel.Text = "Data inceperii";
             // 
-            // dateTimePicker2
+            // modrez_dtp2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(134, 64);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(388, 22);
-            this.dateTimePicker2.TabIndex = 1;
+            this.modrez_dtp2.Location = new System.Drawing.Point(134, 64);
+            this.modrez_dtp2.Name = "modrez_dtp2";
+            this.modrez_dtp2.Size = new System.Drawing.Size(388, 22);
+            this.modrez_dtp2.TabIndex = 1;
             // 
-            // dateTimePicker1
+            // modrez_dtp1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(134, 27);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(388, 22);
-            this.dateTimePicker1.TabIndex = 0;
+            this.modrez_dtp1.Location = new System.Drawing.Point(134, 27);
+            this.modrez_dtp1.Name = "modrez_dtp1";
+            this.modrez_dtp1.Size = new System.Drawing.Size(388, 22);
+            this.modrez_dtp1.TabIndex = 0;
             // 
             // OKButton
             // 
@@ -142,50 +122,33 @@
             this.OKButton.TabIndex = 13;
             this.OKButton.Text = "OK";
             this.OKButton.UseVisualStyleBackColor = true;
+            this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
             // 
-            // gb_TipBilet
+            // modify_label
             // 
-            this.gb_TipBilet.Controls.Add(this.BiletActiune);
-            this.gb_TipBilet.Controls.Add(this.BiletDrama);
-            this.gb_TipBilet.Location = new System.Drawing.Point(70, 208);
-            this.gb_TipBilet.Name = "gb_TipBilet";
-            this.gb_TipBilet.Size = new System.Drawing.Size(377, 72);
-            this.gb_TipBilet.TabIndex = 12;
-            this.gb_TipBilet.TabStop = false;
-            this.gb_TipBilet.Text = "Tip Bilet";
+            this.modify_label.AutoSize = true;
+            this.modify_label.Location = new System.Drawing.Point(66, 224);
+            this.modify_label.Name = "modify_label";
+            this.modify_label.Size = new System.Drawing.Size(100, 16);
+            this.modify_label.TabIndex = 16;
+            this.modify_label.Text = "Noua rezervare";
             // 
-            // BiletActiune
+            // modif_tb
             // 
-            this.BiletActiune.AutoSize = true;
-            this.BiletActiune.Location = new System.Drawing.Point(18, 40);
-            this.BiletActiune.Name = "BiletActiune";
-            this.BiletActiune.Size = new System.Drawing.Size(72, 20);
-            this.BiletActiune.TabIndex = 4;
-            this.BiletActiune.TabStop = true;
-            this.BiletActiune.Text = "Actiune";
-            this.BiletActiune.UseVisualStyleBackColor = true;
-            // 
-            // BiletDrama
-            // 
-            this.BiletDrama.AutoSize = true;
-            this.BiletDrama.Location = new System.Drawing.Point(217, 40);
-            this.BiletDrama.Name = "BiletDrama";
-            this.BiletDrama.Size = new System.Drawing.Size(69, 20);
-            this.BiletDrama.TabIndex = 5;
-            this.BiletDrama.TabStop = true;
-            this.BiletDrama.Text = "Drama";
-            this.BiletDrama.UseVisualStyleBackColor = true;
+            this.modif_tb.Location = new System.Drawing.Point(216, 221);
+            this.modif_tb.Name = "modif_tb";
+            this.modif_tb.Size = new System.Drawing.Size(332, 22);
+            this.modif_tb.TabIndex = 15;
             // 
             // FormModificareRez
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textDurata);
-            this.Controls.Add(this.durataLabel);
+            this.Controls.Add(this.modify_label);
+            this.Controls.Add(this.modif_tb);
             this.Controls.Add(this.gb_DataRez);
             this.Controls.Add(this.OKButton);
-            this.Controls.Add(this.gb_TipBilet);
             this.Controls.Add(this.modRezLabel);
             this.Controls.Add(this.modRez_tb);
             this.Controls.Add(this.ModifyRezTitle);
@@ -194,8 +157,6 @@
             this.Load += new System.EventHandler(this.FormModificareRez_Load);
             this.gb_DataRez.ResumeLayout(false);
             this.gb_DataRez.PerformLayout();
-            this.gb_TipBilet.ResumeLayout(false);
-            this.gb_TipBilet.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -206,16 +167,13 @@
         private System.Windows.Forms.Label ModifyRezTitle;
         private System.Windows.Forms.TextBox modRez_tb;
         private System.Windows.Forms.Label modRezLabel;
-        private System.Windows.Forms.TextBox textDurata;
-        private System.Windows.Forms.Label durataLabel;
         private System.Windows.Forms.GroupBox gb_DataRez;
         private System.Windows.Forms.Label dataFinalizariiLabel;
         private System.Windows.Forms.Label dataInceputLabel;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker modrez_dtp2;
+        private System.Windows.Forms.DateTimePicker modrez_dtp1;
         private System.Windows.Forms.Button OKButton;
-        private System.Windows.Forms.GroupBox gb_TipBilet;
-        private System.Windows.Forms.RadioButton BiletActiune;
-        private System.Windows.Forms.RadioButton BiletDrama;
+        private System.Windows.Forms.Label modify_label;
+        private System.Windows.Forms.TextBox modif_tb;
     }
 }
