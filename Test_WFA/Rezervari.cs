@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+
+
 namespace Test_WFA
 {
     class Rezervari:IRezervari
@@ -46,6 +48,19 @@ namespace Test_WFA
         public int Pret_Final()
         {
             return 50 * durata + Calculator_taxe();
+        }
+
+        public void Calculator_Castiguri_totale()
+        {
+                string pathSumaTotala = @"C:\Users\Andro\Source\Repos\proiectOOP_Cinema44\Test_WFA\TxtFiles\SumaVenituriTotale.txt";
+                int suma = Pret_Final();
+                if (File.Exists(pathSumaTotala))
+                {
+                    var sumaTxt = Convert.ToInt32(File.ReadLines(pathSumaTotala));
+                    sumaTxt += suma;
+                File.WriteAllText(pathSumaTotala, Convert.ToString(sumaTxt));
+
+                }
         }
     }
 }

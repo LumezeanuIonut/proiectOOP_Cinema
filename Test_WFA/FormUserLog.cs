@@ -13,8 +13,9 @@ namespace Test_WFA
 {
     public partial class FormUserLog : Form
     {
-
-        string userPath = @"C:\Users\40767\Desktop\an2\poo\OOP_Project_Cinema\Test_WFA\TxtFiles\User.txt";
+        private string curentPath =
+            @"C:\Users\Andro\Source\Repos\proiectOOP_Cinema44\Test_WFA\TxtFiles\LogareCurenta.txt";
+        string userPath = @"C:\Users\Andro\Source\Repos\proiectOOP_Cinema44\Test_WFA\TxtFiles\User.txt";
         public FormUserLog()
         {
             InitializeComponent();
@@ -39,6 +40,7 @@ namespace Test_WFA
             //Cautare utilizator in fisier text User.txt
             if(File.Exists(userPath))
             {
+                
                 var utilizatori = File.ReadLines(userPath);
                 foreach (var line in utilizatori)
                 {
@@ -75,11 +77,17 @@ namespace Test_WFA
                     clientMenu.Show();
 
                 }
+
                 
             }
             else
             {
                 MessageBox.Show("Parola sau user gresit!");
+            }
+
+            if (File.Exists(curentPath))
+            {
+                File.WriteAllText(curentPath,userTB.Text);
             }
         }
 

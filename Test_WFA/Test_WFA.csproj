@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Anulari.cs" />
+    <Compile Include="Client.cs" />
     <Compile Include="Film.cs" />
     <Compile Include="FilmActiune.cs" />
     <Compile Include="FilmDrama.cs" />
@@ -141,7 +142,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="TxtFiles\Filme.txt" />
+    <Content Include="TxtFiles\LogareCurenta.txt" />
     <Content Include="TxtFiles\Rezervari.txt" />
+    <Content Include="TxtFiles\SumaVenituriTotale.txt" />
     <Content Include="TxtFiles\User.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
