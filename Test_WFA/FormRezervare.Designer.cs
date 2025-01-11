@@ -128,7 +128,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1005, 574);
+            this.ClientSize = new System.Drawing.Size(884, 574);
             this.Controls.Add(this.film_tb);
             this.Controls.Add(this.filmLabel);
             this.Controls.Add(this.TitluRezervare);

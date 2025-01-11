@@ -46,6 +46,7 @@
             this.addFilmButton.TabIndex = 0;
             this.addFilmButton.Text = "Adaugare film";
             this.addFilmButton.UseVisualStyleBackColor = true;
+            this.addFilmButton.Click += new System.EventHandler(this.addFilmButton_Click);
             // 
             // remFilmButton
             // 

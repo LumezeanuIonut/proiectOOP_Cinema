@@ -26,5 +26,10 @@ namespace Test_WFA
         {
 
         }
+
+        private void addFilmButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
