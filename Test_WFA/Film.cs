@@ -16,7 +16,7 @@ namespace Test_WFA
         private int _durata;
         private bool _esteDisponibil;
 
-        // Proprietăți cu get public și set privat (read-only din exterior)
+        // Proprietăți cu get public și set privat (read-only din exterior)a
         public string Titlu => _titlu;
         public string Regizor => _regizor;
         public string Gen => _gen;
