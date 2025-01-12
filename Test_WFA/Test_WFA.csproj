@@ -97,6 +97,7 @@
     <Compile Include="FormUserLog.Designer.cs">
       <DependentUpon>FormUserLog.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utilizator.cs" />
     <EmbeddedResource Include="FormAdmin.resx">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </EmbeddedResource>
