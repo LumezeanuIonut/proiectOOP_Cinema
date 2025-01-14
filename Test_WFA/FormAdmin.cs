@@ -66,7 +66,7 @@ namespace Test_WFA
 
         private void adaugareAdmin_button_ClickC(object sender, EventArgs e)
         {
-            FormCreareUtilizator creareUser = new FormCreareUtilizator();
+            FormCreareUtilizator creareUser = new FormCreareUtilizator("A");
             creareUser.Show();
         }
     }

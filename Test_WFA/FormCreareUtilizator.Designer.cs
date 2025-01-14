@@ -69,6 +69,7 @@
             this.username_tb.Name = "username_tb";
             this.username_tb.Size = new System.Drawing.Size(389, 22);
             this.username_tb.TabIndex = 3;
+            this.username_tb.TextChanged += new System.EventHandler(this.username_tb_TextChanged);
             // 
             // parola_tb
             // 
@@ -76,6 +77,7 @@
             this.parola_tb.Name = "parola_tb";
             this.parola_tb.Size = new System.Drawing.Size(389, 22);
             this.parola_tb.TabIndex = 4;
+            this.parola_tb.TextChanged += new System.EventHandler(this.parola_tb_TextChanged);
             // 
             // ok_button
             // 
@@ -85,6 +87,7 @@
             this.ok_button.TabIndex = 5;
             this.ok_button.Text = "OK";
             this.ok_button.UseVisualStyleBackColor = true;
+            this.ok_button.Click += new System.EventHandler(this.ok_button_Click);
             // 
             // FormCreareUtilizator
             // 

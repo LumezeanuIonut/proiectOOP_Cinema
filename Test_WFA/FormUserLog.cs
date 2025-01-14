@@ -13,9 +13,8 @@ namespace Test_WFA
 {
     public partial class FormUserLog : Form
     {
-        private string curentPath =
-            @"C:\Users\Andro\Source\Repos\proiectOOP_Cinema44\Test_WFA\TxtFiles\LogareCurenta.txt";
-        string userPath = @"C:\Users\Andro\Source\Repos\proiectOOP_Cinema44\Test_WFA\TxtFiles\User.txt";
+        private string curentPath = @"C:\Users\40767\Desktop\an2\poo\OOP_Project_Cinema\Test_WFA\TxtFiles\LogareCurenta.txt";
+        string userPath = @"C:\Users\40767\Desktop\an2\poo\OOP_Project_Cinema\Test_WFA\TxtFiles\User.txt";
         public FormUserLog()
         {
             InitializeComponent();
@@ -69,14 +68,14 @@ namespace Test_WFA
                 if (User[0] == 'A')
                 {
                     FormAdmin adminMenu= new FormAdmin();
-                    Utilizator utilizator = new Utilizator('A' , user , parola_tb, UserName);
+                    Utilizator utilizator = new Utilizator("A" , user , parola_tb, UserName);
                     adminMenu.Show();
 
                 }
                 else
                 {
                     FormClient clientMenu = new FormClient();
-                    Utilizator utilizator = new Utilizator('C', user, parola_tb , UserName);
+                    Utilizator utilizator = new Utilizator("C", user, parola_tb , UserName);
                     clientMenu.Show();
 
                 }
@@ -96,6 +95,13 @@ namespace Test_WFA
 
         private void FormUserLog_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void clientadd_button_Click(object sender, EventArgs e)
+        {
+            FormCreareUtilizator creareClient = new FormCreareUtilizator("C");
+            creareClient.Show();
 
         }
     }

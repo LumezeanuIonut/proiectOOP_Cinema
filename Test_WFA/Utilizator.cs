@@ -8,12 +8,12 @@ namespace Test_WFA
 {
     public class Utilizator
     {
-        private char _tip;         // 'A' = Admin, 'C' = Client
+        private string _tip;         // 'A' = Admin, 'C' = Client
         private string _user;
         private string _parola;
         private string _username;
 
-        public char Tip
+        public string Tip
         {
             get { return _tip; }
             set { _tip = value; }
@@ -36,7 +36,7 @@ namespace Test_WFA
             set { _username = value; }
         }
 
-        public Utilizator(char tip, string user, string parola, string username)
+        public Utilizator(string tip, string user, string parola, string username)
         {
             _tip = tip;
             _username = username;
@@ -48,7 +48,7 @@ namespace Test_WFA
             {
 
                 string firstThreeLetters = _username.Length >= 3 ? _username.Substring(0, 3) : _username;
-                return $"{_tip}{firstThreeLetters}";
+                return _tip + firstThreeLetters;
 
             }
     }
