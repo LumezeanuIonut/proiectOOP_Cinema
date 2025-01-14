@@ -42,13 +42,14 @@ namespace Test_WFA
             _username = username;
             _parola = parola;
             _username = username;
+        }
 
         public string CreareUser()
-        {
+            {
 
-            string firstThreeLetters = _username.Length >= 3 ? _username.Substring(0, 3) : _username;
-            return $"{_tip}{firstThreeLetters}";
+                string firstThreeLetters = _username.Length >= 3 ? _username.Substring(0, 3) : _username;
+                return $"{_tip}{firstThreeLetters}";
 
-        }
-       }
+            }
+    }
 }
