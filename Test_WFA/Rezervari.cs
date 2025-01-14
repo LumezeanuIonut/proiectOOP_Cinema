@@ -71,10 +71,13 @@ namespace Test_WFA
             {
                 if (File.Exists(pathSumaTotala))
                 {
-                    var lines = File.ReadAllLines(pathSumaTotala);
-                    if (lines.Length > 0 && int.TryParse(lines[0], out int result))
+                    using (StreamReader sr = new StreamReader(pathSumaTotala))
                     {
-                        sumaTxt = result;
+                        string sumaTot = sr.ReadLine();
+                        if (!string.IsNullOrEmpty(sumaTot) && int.TryParse(sumaTot, out int result))
+                        {
+                            sumaTxt = result;
+                        }
                     }
                 }
                 else
@@ -83,12 +86,21 @@ namespace Test_WFA
                 }
 
                 sumaTxt += suma;
-                File.WriteAllText(pathSumaTotala, sumaTxt.ToString());
+
+                // Debugging information
+                MessageBox.Show("Suma initiala: " + sumaTxt + "\nSuma adaugata: " + suma + "\nSuma finala: " + sumaTxt);
+
+                using (StreamWriter sw = new StreamWriter(pathSumaTotala))
+                {
+                    sw.WriteLine(sumaTxt.ToString());
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("A apărut o eroare: " + ex.Message, "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
     }
 }

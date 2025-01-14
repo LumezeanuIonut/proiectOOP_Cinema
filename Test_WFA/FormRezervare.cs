@@ -52,7 +52,7 @@ namespace Test_WFA
                         string logCurent = File.ReadAllText(curentPath);
                     rezervare1.Afisare_rezervare();
                         sw.WriteLine(film.Titlu + ',' + film.Gen + ',' + Convert.ToString(rezervare1.inceputRezervare) + ',' + Convert.ToString(rezervare1.sfarsitRezervare) + ',' + Convert.ToString(film.Durata) + ',' + logCurent);
-                    
+                        rezervare1.Calculator_Castiguri_totale();
                 }
             }
         }
@@ -95,6 +95,11 @@ namespace Test_WFA
         }
 
         private void gb_DataRez_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void film_tb_TextChanged(object sender, EventArgs e)
         {
 
         }
