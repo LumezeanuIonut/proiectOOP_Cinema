@@ -66,7 +66,7 @@
             this.modifyButton.TabIndex = 2;
             this.modifyButton.Text = "Modificare interval rezervare film ";
             this.modifyButton.UseVisualStyleBackColor = true;
-            this.modifyButton.Click += new System.EventHandler(this.modifyButton_Click);
+            this.modifyButton.Click += new System.EventHandler(this.adaugareAdmin_button_ClickC);
             // 
             // remClientButton
             // 
@@ -123,7 +123,7 @@
             this.adaugareAdmin_button.TabIndex = 8;
             this.adaugareAdmin_button.Text = "Adaugare admin";
             this.adaugareAdmin_button.UseVisualStyleBackColor = true;
-            this.adaugareAdmin_button.Click += new System.EventHandler(this.adaugareAdmin_button_Click);
+            this.adaugareAdmin_button.Click += new System.EventHandler(this.adaugareAdmin_button_ClickC);
             // 
             // FormAdmin
             // 
