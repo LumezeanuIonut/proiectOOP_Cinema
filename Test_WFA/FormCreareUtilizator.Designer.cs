@@ -99,6 +99,7 @@
             this.Controls.Add(this.crUser_label);
             this.Name = "FormCreareUtilizator";
             this.Text = "FormCreareUtilizator";
+            this.Load += new System.EventHandler(this.FormCreareUtilizator_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

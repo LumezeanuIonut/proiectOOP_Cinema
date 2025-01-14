@@ -66,6 +66,7 @@
             this.modifyButton.TabIndex = 2;
             this.modifyButton.Text = "Modificare interval rezervare film ";
             this.modifyButton.UseVisualStyleBackColor = true;
+            this.modifyButton.Click += new System.EventHandler(this.modifyButton_Click);
             // 
             // remClientButton
             // 

@@ -81,6 +81,7 @@
             this.Controls.Add(this.Anulare_label);
             this.Name = "FormAnulare";
             this.Text = "FormAnulare";
+            this.Load += new System.EventHandler(this.FormAnulare_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
