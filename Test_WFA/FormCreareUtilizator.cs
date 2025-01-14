@@ -16,5 +16,10 @@ namespace Test_WFA
         {
             InitializeComponent();
         }
+
+        private void FormCreareUtilizator_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
