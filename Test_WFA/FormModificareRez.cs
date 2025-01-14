@@ -91,6 +91,7 @@ namespace Test_WFA
 
                 string logCurent = File.ReadAllText(curentPath);
                 string rezervareNoua = titlu + ',' + gen + ',' + modrez_dtp1.Text +',' + modrez_dtp2.Text + ',' + durata + ',' + logCurent;
+                Rezervari rezervare1 = new Rezervari(titlu, gen, modrez_dtp1.Text, modrez_dtp2.Text, Convert.ToInt32(durata));
                 if (rezervariText.Contains(modRez_tb.Text))
                 {
                     rezervariText = rezervariText.Replace(modRez_tb.Text, rezervareNoua);

@@ -23,7 +23,33 @@ namespace Test_WFA
         public string inceputRezervare { get; set; }
         public string sfarsitRezervare { get; set; }
         public int durata { get; set; }
+        private Utilizator _utilizator;
+        private int _pretInitial;
+        private int _pretFinal;
 
+        public Utilizator Utilizator
+        {
+            get
+            {
+                return _utilizator;
+            }
+            set
+            {
+                _utilizator = value;
+            }
+        }
+
+        public int PretInitial
+        {
+            get { return _pretInitial; }
+            set { _pretInitial = value; }
+        }
+
+        public int PretFinal
+        {
+            get { return _pretFinal;}
+            set { _pretFinal = value; }
+        }
         public Rezervari(string _titlu , string _gen, string _inceputRezervare, string _sfarsitRezervare,int _durata)
         {   
             titlu=_titlu;
@@ -45,18 +71,19 @@ namespace Test_WFA
         {
             var x = 0;
             if (gen == "Actiune")
-                x = TAX_ACTIUNE * durata;
+                PretInitial = TAX_ACTIUNE * durata;
 
 
             if (gen == "Drama")
-                x = TAX_DRAMA * durata;
+                PretInitial = TAX_DRAMA * durata;
 
-            return x;
+            return PretInitial;
         }
 
         public int Pret_Final()
         {
-            return PRET_BAZA * durata + Calculator_taxe();
+            PretFinal =PRET_BAZA * durata + Calculator_taxe();
+            return PretFinal;
         }
         //Calculam suma totala a rezervarilor
         public void Calculator_Castiguri_totale()
@@ -99,7 +126,6 @@ namespace Test_WFA
                 MessageBox.Show("A apărut o eroare: " + ex.Message, "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
 
     }
 }

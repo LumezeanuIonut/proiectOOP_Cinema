@@ -21,5 +21,15 @@ namespace Test_WFA
         {
 
         }
+
+        private void username_tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void parola_tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -53,6 +53,7 @@ namespace Test_WFA
                     rezervare1.Afisare_rezervare();
                         sw.WriteLine(film.Titlu + ',' + film.Gen + ',' + Convert.ToString(rezervare1.inceputRezervare) + ',' + Convert.ToString(rezervare1.sfarsitRezervare) + ',' + Convert.ToString(film.Durata) + ',' + logCurent);
                         rezervare1.Calculator_Castiguri_totale();
+                        
                 }
             }
         }

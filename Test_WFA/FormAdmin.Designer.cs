@@ -56,6 +56,7 @@
             this.remFilmButton.TabIndex = 1;
             this.remFilmButton.Text = "Stergere film";
             this.remFilmButton.UseVisualStyleBackColor = true;
+            this.remFilmButton.Click += new System.EventHandler(this.remFilmButton_Click);
             // 
             // modifyButton
             // 
@@ -113,6 +114,7 @@
             this.clientWinButton.TabIndex = 7;
             this.clientWinButton.Text = "Vizualizare castiguri pentru o anumita persoana";
             this.clientWinButton.UseVisualStyleBackColor = true;
+            this.clientWinButton.Click += new System.EventHandler(this.clientWinButton_Click);
             // 
             // FormAdmin
             // 

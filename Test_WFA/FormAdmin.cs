@@ -68,5 +68,16 @@ namespace Test_WFA
         {
 
         }
+
+        private void clientWinButton_Click(object sender, EventArgs e)
+        {
+            FormCautareClient formCautareClient = new FormCautareClient();
+            formCautareClient.Show();
+        }
+
+        private void remFilmButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
