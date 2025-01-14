@@ -30,15 +30,16 @@ namespace Test_WFA
             }
         }
 
-        public Client(char Tip,string Username, string Parola)
+        public Client(char Tip,string User, string Parola ,string Username) : base(Tip , User, Parola, Username)
         {
             if (Username == null)
                 throw new ArgumentNullException("Username-ul nu poate fi null");
             if (Parola == null)
                 throw new ArgumentNullException("Parola nu poate fi null");
-            this.Tip = 'C';
+            this.Tip = Tip;
             this.Username = Username;
             this.Parola = Parola;
+            this.User = User;
             Cod = "C" + Username[1].ToString().ToUpper() + _nrCod++;
             _rezervari = new Dictionary<Film, (DateTime InceputRezervare, DateTime SfarsitRezervare)>();
             _istoricRezervari = new List<IstoricRezervari>();
