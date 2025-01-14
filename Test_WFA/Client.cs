@@ -30,7 +30,7 @@ namespace Test_WFA
             }
         }
 
-        public Client(string Username, string Parola)
+        public Client(char Tip,string Username, string Parola)
         {
             if (Username == null)
                 throw new ArgumentNullException("Username-ul nu poate fi null");
