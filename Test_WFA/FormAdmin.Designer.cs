@@ -36,11 +36,12 @@
             this.clientRezHistButton = new System.Windows.Forms.Button();
             this.totWinButton = new System.Windows.Forms.Button();
             this.clientWinButton = new System.Windows.Forms.Button();
+            this.adaugareAdmin_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // addFilmButton
             // 
-            this.addFilmButton.Location = new System.Drawing.Point(35, 58);
+            this.addFilmButton.Location = new System.Drawing.Point(35, 43);
             this.addFilmButton.Name = "addFilmButton";
             this.addFilmButton.Size = new System.Drawing.Size(730, 23);
             this.addFilmButton.TabIndex = 0;
@@ -50,7 +51,7 @@
             // 
             // remFilmButton
             // 
-            this.remFilmButton.Location = new System.Drawing.Point(35, 105);
+            this.remFilmButton.Location = new System.Drawing.Point(35, 133);
             this.remFilmButton.Name = "remFilmButton";
             this.remFilmButton.Size = new System.Drawing.Size(730, 23);
             this.remFilmButton.TabIndex = 1;
@@ -59,7 +60,7 @@
             // 
             // modifyButton
             // 
-            this.modifyButton.Location = new System.Drawing.Point(35, 156);
+            this.modifyButton.Location = new System.Drawing.Point(35, 177);
             this.modifyButton.Name = "modifyButton";
             this.modifyButton.Size = new System.Drawing.Size(730, 23);
             this.modifyButton.TabIndex = 2;
@@ -68,7 +69,7 @@
             // 
             // remClientButton
             // 
-            this.remClientButton.Location = new System.Drawing.Point(35, 206);
+            this.remClientButton.Location = new System.Drawing.Point(35, 222);
             this.remClientButton.Name = "remClientButton";
             this.remClientButton.Size = new System.Drawing.Size(730, 23);
             this.remClientButton.TabIndex = 3;
@@ -77,7 +78,7 @@
             // 
             // TotRezHistButton
             // 
-            this.TotRezHistButton.Location = new System.Drawing.Point(35, 252);
+            this.TotRezHistButton.Location = new System.Drawing.Point(35, 268);
             this.TotRezHistButton.Name = "TotRezHistButton";
             this.TotRezHistButton.Size = new System.Drawing.Size(730, 23);
             this.TotRezHistButton.TabIndex = 4;
@@ -86,7 +87,7 @@
             // 
             // clientRezHistButton
             // 
-            this.clientRezHistButton.Location = new System.Drawing.Point(35, 300);
+            this.clientRezHistButton.Location = new System.Drawing.Point(35, 316);
             this.clientRezHistButton.Name = "clientRezHistButton";
             this.clientRezHistButton.Size = new System.Drawing.Size(730, 23);
             this.clientRezHistButton.TabIndex = 5;
@@ -96,7 +97,7 @@
             // 
             // totWinButton
             // 
-            this.totWinButton.Location = new System.Drawing.Point(35, 345);
+            this.totWinButton.Location = new System.Drawing.Point(35, 364);
             this.totWinButton.Name = "totWinButton";
             this.totWinButton.Size = new System.Drawing.Size(730, 23);
             this.totWinButton.TabIndex = 6;
@@ -106,18 +107,29 @@
             // 
             // clientWinButton
             // 
-            this.clientWinButton.Location = new System.Drawing.Point(35, 389);
+            this.clientWinButton.Location = new System.Drawing.Point(35, 409);
             this.clientWinButton.Name = "clientWinButton";
             this.clientWinButton.Size = new System.Drawing.Size(730, 23);
             this.clientWinButton.TabIndex = 7;
             this.clientWinButton.Text = "Vizualizare castiguri pentru o anumita persoana";
             this.clientWinButton.UseVisualStyleBackColor = true;
             // 
+            // adaugareAdmin_button
+            // 
+            this.adaugareAdmin_button.Location = new System.Drawing.Point(35, 87);
+            this.adaugareAdmin_button.Name = "adaugareAdmin_button";
+            this.adaugareAdmin_button.Size = new System.Drawing.Size(730, 23);
+            this.adaugareAdmin_button.TabIndex = 8;
+            this.adaugareAdmin_button.Text = "Adaugare admin";
+            this.adaugareAdmin_button.UseVisualStyleBackColor = true;
+            this.adaugareAdmin_button.Click += new System.EventHandler(this.adaugareAdmin_button_Click);
+            // 
             // FormAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(836, 484);
+            this.Controls.Add(this.adaugareAdmin_button);
             this.Controls.Add(this.clientWinButton);
             this.Controls.Add(this.totWinButton);
             this.Controls.Add(this.clientRezHistButton);
@@ -145,5 +157,6 @@
         private System.Windows.Forms.Button clientRezHistButton;
         private System.Windows.Forms.Button totWinButton;
         private System.Windows.Forms.Button clientWinButton;
+        private System.Windows.Forms.Button adaugareAdmin_button;
     }
 }
