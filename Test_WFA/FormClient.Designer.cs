@@ -61,6 +61,7 @@
             this.CancelButton.TabIndex = 0;
             this.CancelButton.Text = "Anulare rezervare";
             this.CancelButton.UseVisualStyleBackColor = true;
+            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // FormClient
             // 

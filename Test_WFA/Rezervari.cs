@@ -10,15 +10,20 @@ using System.Data.OleDb;
 
 namespace Test_WFA
 {
-    class Rezervari:IRezervari
+    class Rezervari : IRezervari
     {
 
         //dupa ce este facuta clasa Film trebuie modificat tipul variabilei
+        private const int TAX_ACTIUNE = 20;
+        private const int TAX_DRAMA = 15;
+        private const int PRET_BAZA = 50;
+
         public string titlu { get; set; }
         public string gen { get; set; }
         public string inceputRezervare { get; set; }
         public string sfarsitRezervare { get; set; }
         public int durata { get; set; }
+
         public Rezervari(string _titlu , string _gen, string _inceputRezervare, string _sfarsitRezervare,int _durata)
         {   
             titlu=_titlu;
@@ -27,39 +32,74 @@ namespace Test_WFA
             sfarsitRezervare = _sfarsitRezervare;
             durata = _durata;
         }
-       public void Afisare_rezervare()
-       {
-            MessageBox.Show("Titlu" + titlu + "Genul filmului: " + gen + "\nData inceput: " + inceputRezervare + "\nData sfarsit: " + sfarsitRezervare + "\nDurata: " + durata + "\nTaxe: " + Calculator_taxe() + "\nPret final: " + Pret_Final());
-            
+
+        public void Afisare_rezervare()
+        {
+            MessageBox.Show("Titlu" + titlu + "Genul filmului: " + gen + "\nData inceput: " + inceputRezervare +
+                            "\nData sfarsit: " + sfarsitRezervare + "\nDurata: " + durata + "\nTaxe: " +
+                            Calculator_taxe() + "\nPret final: " + Pret_Final());
+
         }
+
         public int Calculator_taxe()
         {
             var x = 0;
             if (gen == "Actiune")
-                x = 20 * durata;
+                x = TAX_ACTIUNE * durata;
 
 
             if (gen == "Drama")
-                x = 15 * durata;
+                x = TAX_DRAMA * durata;
 
             return x;
         }
+
         public int Pret_Final()
         {
-            return 50 * durata + Calculator_taxe();
+            return PRET_BAZA * durata + Calculator_taxe();
         }
-
+        //Calculam suma totala a rezervarilor
         public void Calculator_Castiguri_totale()
         {
-                string pathSumaTotala = @"C:\Users\40767\Desktop\an2\poo\OOP_Project_Cinema\Test_WFA\TxtFiles\SumaVenituriTotale.txt";
-                int suma = Pret_Final();
+
+            string pathSumaTotala = @"C:\Users\Andro\Source\Repos\proiectOOP_Cinema44\Test_WFA\TxtFiles\SumaVenituriTotale.txt";
+            int suma = Pret_Final();
+            int sumaTxt = 0;
+
+            try
+            {
                 if (File.Exists(pathSumaTotala))
                 {
-                    int sumaTxt = Convert.ToInt32(File.ReadAllText(pathSumaTotala));
-                    sumaTxt += suma;
-                File.WriteAllText(pathSumaTotala, Convert.ToString(sumaTxt));
-
+                    using (StreamReader sr = new StreamReader(pathSumaTotala))
+                    {
+                        string sumaTot = sr.ReadLine();
+                        if (!string.IsNullOrEmpty(sumaTot) && int.TryParse(sumaTot, out int result))
+                        {
+                            sumaTxt = result;
+                        }
+                    }
                 }
+                else
+                {
+                    File.Create(pathSumaTotala).Close();
+                }
+
+                sumaTxt += suma;
+
+                // Debugging information
+                MessageBox.Show("Suma initiala: " + sumaTxt + "\nSuma adaugata: " + suma + "\nSuma finala: " + sumaTxt);
+
+                using (StreamWriter sw = new StreamWriter(pathSumaTotala))
+                {
+                    sw.WriteLine(sumaTxt.ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("A apărut o eroare: " + ex.Message, "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
+
     }
 }

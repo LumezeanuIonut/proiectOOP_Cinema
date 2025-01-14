@@ -123,6 +123,7 @@
             this.film_tb.Name = "film_tb";
             this.film_tb.Size = new System.Drawing.Size(448, 22);
             this.film_tb.TabIndex = 11;
+            this.film_tb.TextChanged += new System.EventHandler(this.film_tb_TextChanged);
             // 
             // FormRezervare
             // 
