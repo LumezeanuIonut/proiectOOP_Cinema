@@ -102,6 +102,7 @@
             this.totWinButton.TabIndex = 6;
             this.totWinButton.Text = "Vizualizare castiguri totale ";
             this.totWinButton.UseVisualStyleBackColor = true;
+            this.totWinButton.Click += new System.EventHandler(this.totWinButton_Click);
             // 
             // clientWinButton
             // 
