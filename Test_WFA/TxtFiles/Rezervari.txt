@@ -7,4 +7,5 @@
 "Forrest Gump","Drama",1/12/2025 12:00:00 AM,1/12/2025 12:00:00 AM,142,CANST
 "Schindler's List","Action",1/12/2025 12:00:00 AM,1/12/2025 12:00:00 AM,195,CANST
 "Goodfellas","Drama",1/12/2025 12:00:00 AM,1/12/2025 12:00:00 AM,146,CANST
-"Fight Club","Drama",1/14/2025 12:00:00 AM,1/14/2025 12:00:00 AM,139,CANST
+"Fight Club","Drama",1/14/2025 12:00:00 AM,1/14/2025 12:00:00 AM,139,CANST"Schindler's List","Action",Tuesday, January 14, 2025,Tuesday, January 14, 2025,195,CANST
+"Schindler's List","Action",Tuesday, January 14, 2025,Tuesday, January 14, 2025,195,CANST

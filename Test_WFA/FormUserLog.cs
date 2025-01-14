@@ -14,8 +14,8 @@ namespace Test_WFA
     public partial class FormUserLog : Form
     {
         private string curentPath =
-            @"C:\Users\40767\Desktop\an2\poo\OOP_Project_Cinema\Test_WFA\TxtFiles\LogareCurenta.txt";
-        string userPath = @"C:\Users\40767\Desktop\an2\poo\OOP_Project_Cinema\Test_WFA\TxtFiles\User.txt";
+            @"C:\Users\Andro\Source\Repos\proiectOOP_Cinema44\Test_WFA\TxtFiles\LogareCurenta.txt";
+        string userPath = @"C:\Users\Andro\Source\Repos\proiectOOP_Cinema44\Test_WFA\TxtFiles\User.txt";
         public FormUserLog()
         {
             InitializeComponent();
@@ -33,9 +33,9 @@ namespace Test_WFA
 
         private void OkButton_Click(object sender, EventArgs e)
         {
-            Utilizator utilizator = new Utilizator();
+            //Utilizator utilizator = new Utilizator();
             string user = userTB.Text;
-            string parola = parolaTB.Text;
+            string parola_tb = parolaTB.Text;
             string User = "", Password = "", UserName="";
             bool ok = false;
             //Cautare utilizator in fisier text User.txt
@@ -51,7 +51,7 @@ namespace Test_WFA
                         User = splitLine[0];
                         Password = splitLine[1];
                         UserName = splitLine[2];
-                        if (User == user && Password == parola)
+                        if (User == user && Password == parola_tb)
                         {
                             ok = true;
                             break;
@@ -69,12 +69,14 @@ namespace Test_WFA
                 if (User[0] == 'A')
                 {
                     FormAdmin adminMenu= new FormAdmin();
+                    Utilizator utilizator = new Utilizator('A' , user , parola_tb, UserName);
                     adminMenu.Show();
 
                 }
                 else
                 {
                     FormClient clientMenu = new FormClient();
+                    Utilizator utilizator = new Utilizator('C', user, parola_tb , UserName);
                     clientMenu.Show();
 
                 }

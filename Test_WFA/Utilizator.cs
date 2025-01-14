@@ -6,49 +6,50 @@ using System.Threading.Tasks;
 
 namespace Test_WFA
 {
-    class Utilizator
+    public class Utilizator
     {
-        private char _tip;
-        private string _username;
+        private char _tip;         // 'A' = Admin, 'C' = Client
+        private string _user;
         private string _parola;
+        private string _username;
 
         public char Tip
         {
-            get
-            {
-                return _tip;
-            }
-            set
-            {
-                _tip = value;
-            }
+            get { return _tip; }
+            set { _tip = value; }
         }
 
-        public string Username
+        public string User
         {
-            get
-            {
-                return _username;
-            }
-            set
-            {
-                _username = value;
-            }
+            get { return _user; }
+            set { _user = value; }
         }
 
         public string Parola
         {
-            get
-            {
-                return _parola;
-            }
-            set
-            {
-                _parola = value;
-            }
+            get { return _parola; }
+            set { _parola = value; }
         }
-        public string CreareUtilizator(char Tip,String Username) 
+        public string Username
         {
+            get { return _username; }
+            set { _username = value; }
+        }
+
+        public Utilizator(char tip, string user, string parola, string username)
+        {
+            _tip = tip;
+            _username = username;
+            _parola = parola;
+            _username = username;
+        }
+
+        public string CreareUser()
+        {
+
+            string firstThreeLetters = _username.Length >= 3 ? _username.Substring(0, 3) : _username;
+            return $"{_tip}{firstThreeLetters}";
+
         }
     }
 }
