@@ -95,6 +95,7 @@
       <DependentUpon>FormRezervare.cs</DependentUpon>
     </Compile>
     <Compile Include="IRezervari.cs" />
+    <Compile Include="IstoricRezervari.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rezervari.cs" />
