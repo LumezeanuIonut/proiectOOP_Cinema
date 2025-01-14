@@ -47,8 +47,5 @@ namespace Test_WFA
                 _parola = value;
             }
         }
-        public string CreareUtilizator(char Tip,String Username) 
-        {
-        }
     }
 }
