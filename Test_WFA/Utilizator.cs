@@ -47,21 +47,8 @@ namespace Test_WFA
                 _parola = value;
             }
         }
-
-        public static Utilizator CrUtil(char Tip,String Username,String Parola) 
+        public string CreareUtilizator(char Tip,String Username) 
         {
-            switch (char.ToUpper(Tip)) 
-            {
-                case 'A':
-                    return new Client(Username, Parola);
-
-                case 'C':
-                    return new Client(Username, Parola);
-
-                default:
-                    throw new ArgumentException("tipul utilizatorului nu este valid!");
-
-            }
         }
     }
 }

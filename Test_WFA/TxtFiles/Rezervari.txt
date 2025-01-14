@@ -1,2 +1,5 @@
-"Goodfellas","Drama",1/10/2025 12:00:00 AM,1/10/2025 12:00:00 AM,146,CANST
-"Forrest Gump","Drama",1/10/2025 12:00:00 AM,1/10/2025 12:00:00 AM,142,CANST
+"Inception","Drama",joi, 9 ianuarie 2025,vineri, 10 ianuarie 2025,148,CANST
+"Pulp Fiction","Action",marți, 14 ianuarie 2025,marți, 14 ianuarie 2025,154,CANST
+"The Godfather","Action",marți, 14 ianuarie 2025,marți, 14 ianuarie 2025,175,CANST
+"The Matrix","Drama",marți, 14 ianuarie 2025,marți, 14 ianuarie 2025,136,CANST
+"The Godfather","Action",marți, 14 ianuarie 2025,marți, 14 ianuarie 2025,175,CANST

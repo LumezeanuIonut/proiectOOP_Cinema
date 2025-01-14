@@ -15,6 +15,7 @@ namespace Test_WFA
     {
         string rezervariPath = @"C:\Users\40767\Desktop\an2\poo\OOP_Project_Cinema\Test_WFA\TxtFiles\Rezervari.txt";
         string filmPath = @"C:\Users\40767\Desktop\an2\poo\OOP_Project_Cinema\Test_WFA\TxtFiles\Filme.txt";
+        private string curentPath = @"C:\Users\40767\Desktop\an2\poo\OOP_Project_Cinema\Test_WFA\TxtFiles\LogareCurenta.txt";
 
         StringCollection rezervariCollection = new StringCollection();
         public FormModificareRez()
@@ -73,12 +74,12 @@ namespace Test_WFA
             string anLansare = "";  
             string durata = "";
 
-            var splitLine = modRez_tb.Text.Split(',');
+            var splitLine = modif_tb.Text.Split(',');
             if (splitLine.Length == 5)
             {
                 titlu = splitLine[0];
-                gen = splitLine[1];
-                regizor = splitLine[2];
+                regizor = splitLine[1];
+                gen = splitLine[2];
                 anLansare = splitLine[3];
                 durata = splitLine[4];
             }
@@ -86,7 +87,10 @@ namespace Test_WFA
             {
                 //aici se citesc toate rezervarile si se modifica cea selectata
                 string rezervariText = File.ReadAllText(rezervariPath);
-                string rezervareNoua = titlu + ',' + gen + ',' + modrez_dtp1.Text +',' + modrez_dtp2.Text + ',' + durata;
+                //se inroduce intr-o variabila userul curent 
+
+                string logCurent = File.ReadAllText(curentPath);
+                string rezervareNoua = titlu + ',' + gen + ',' + modrez_dtp1.Text +',' + modrez_dtp2.Text + ',' + durata + ',' + logCurent;
                 if (rezervariText.Contains(modRez_tb.Text))
                 {
                     rezervariText = rezervariText.Replace(modRez_tb.Text, rezervareNoua);
