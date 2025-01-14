@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using System.IO;
+
 namespace Test_WFA
 {
     public partial class FormClient : Form
@@ -43,7 +44,8 @@ namespace Test_WFA
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
-
+            FormAnulare anulare = new FormAnulare();
+            anulare.ShowDialog();
         }
     }
 }

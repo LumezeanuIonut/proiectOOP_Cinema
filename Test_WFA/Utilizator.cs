@@ -42,7 +42,6 @@ namespace Test_WFA
             _username = username;
             _parola = parola;
             _username = username;
-        }
 
         public string CreareUser()
         {
@@ -51,5 +50,5 @@ namespace Test_WFA
             return $"{_tip}{firstThreeLetters}";
 
         }
-    }
+       }
 }
