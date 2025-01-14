@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrator.cs" />
     <Compile Include="Anulari.cs" />
     <Compile Include="Client.cs" />
     <Compile Include="DataService.cs" />
@@ -94,6 +95,8 @@
     <Compile Include="FormRezervare.Designer.cs">
       <DependentUpon>FormRezervare.cs</DependentUpon>
     </Compile>
+    <Compile Include="IAdministator.cs" />
+    <Compile Include="IClient.cs" />
     <Compile Include="IRezervari.cs" />
     <Compile Include="IstoricRezervari.cs" />
     <Compile Include="Program.cs" />
