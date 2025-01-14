@@ -60,7 +60,7 @@ namespace Test_WFA
         {
             return PRET_BAZA * durata + Calculator_taxe();
         }
-
+        //Calculam suma totala a rezervarilor
         public void Calculator_Castiguri_totale()
         {
             string pathSumaTotala = @"C:\Users\Andro\Source\Repos\proiectOOP_Cinema44\Test_WFA\TxtFiles\SumaVenituriTotale.txt";
