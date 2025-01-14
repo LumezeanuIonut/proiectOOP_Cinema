@@ -14,8 +14,8 @@ namespace Test_WFA
     public partial class FormUserLog : Form
     {
         private string curentPath =
-            @"C:\Users\Andro\Source\Repos\proiectOOP_Cinema44\Test_WFA\TxtFiles\LogareCurenta.txt";
-        string userPath = @"C:\Users\Andro\Source\Repos\proiectOOP_Cinema44\Test_WFA\TxtFiles\User.txt";
+            @"C:\Users\40767\Desktop\an2\poo\OOP_Project_Cinema\Test_WFA\TxtFiles\LogareCurenta.txt";
+        string userPath = @"C:\Users\40767\Desktop\an2\poo\OOP_Project_Cinema\Test_WFA\TxtFiles\User.txt";
         public FormUserLog()
         {
             InitializeComponent();
@@ -33,6 +33,7 @@ namespace Test_WFA
 
         private void OkButton_Click(object sender, EventArgs e)
         {
+            Utilizator utilizator = new Utilizator();
             string user = userTB.Text;
             string parola = parolaTB.Text;
             string User = "", Password = "", UserName="";

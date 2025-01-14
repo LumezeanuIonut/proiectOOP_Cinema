@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Data.OleDb;
 
 
 namespace Test_WFA
@@ -19,14 +20,13 @@ namespace Test_WFA
 
         public string titlu { get; set; }
         public string gen { get; set; }
-        public DateTime inceputRezervare { get; set; }
-        public DateTime sfarsitRezervare { get; set; }
+        public string inceputRezervare { get; set; }
+        public string sfarsitRezervare { get; set; }
         public int durata { get; set; }
 
-        public Rezervari(string _titlu, string _gen, DateTime _inceputRezervare, DateTime _sfarsitRezervare,
-            int _durata)
-        {
-            titlu = _titlu;
+        public Rezervari(string _titlu , string _gen, string _inceputRezervare, string _sfarsitRezervare,int _durata)
+        {   
+            titlu=_titlu;
             gen = _gen;
             inceputRezervare = _inceputRezervare;
             sfarsitRezervare = _sfarsitRezervare;
@@ -44,8 +44,6 @@ namespace Test_WFA
         public int Calculator_taxe()
         {
             var x = 0;
-
-            // trebuie modificat dupa ce este creeata clasa de film 
             if (gen == "Actiune")
                 x = TAX_ACTIUNE * durata;
 
@@ -63,6 +61,7 @@ namespace Test_WFA
         //Calculam suma totala a rezervarilor
         public void Calculator_Castiguri_totale()
         {
+
             string pathSumaTotala = @"C:\Users\Andro\Source\Repos\proiectOOP_Cinema44\Test_WFA\TxtFiles\SumaVenituriTotale.txt";
             int suma = Pret_Final();
             int sumaTxt = 0;
