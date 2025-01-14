@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Anulari.cs" />
+    <Compile Include="Client.cs" />
     <Compile Include="DataService.cs" />
     <Compile Include="Film.cs" />
     <Compile Include="FilmActiune.cs" />
