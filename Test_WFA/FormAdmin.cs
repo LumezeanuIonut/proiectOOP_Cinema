@@ -25,7 +25,7 @@ namespace Test_WFA
 
         private void button6_Click(object sender, EventArgs e)
         {
-            FormCautareFilmeClient formCautareFilmeClient = new FormCautareFilmeClient();
+             FormCautareFilmeClient formCautareFilmeClient = new FormCautareFilmeClient();
             formCautareFilmeClient.Show();
         }
 
