@@ -3,4 +3,5 @@ AAnd/parola/Andronache Stefan
 AMit/parola/Mitar Alin
 ALum/parola/Lumezeanu Ionut
 CANST/parola/ANDRONACHE
-
+CAnd/parola/Andrei Vlad
+AAle/parola/Alex Vlad

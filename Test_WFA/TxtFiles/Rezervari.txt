@@ -1,7 +1,5 @@
-"A"/"S"/Wednesday, January 15, 2025/Wednesday, January 15, 2025/29/CAND
-"A"/"S"/Wednesday, January 15, 2025/Wednesday, January 15, 2025/29/CAND
 "Inception"/"Drama"/Wednesday, January 15, 2025/Wednesday, January 15, 2025/148/CANST
 "Forrest Gump"/"Drama"/Wednesday, January 15, 2025/Wednesday, January 15, 2025/142/CANST
 "The Matrix"/"Drama"/Wednesday, January 15, 2025/Wednesday, January 15, 2025/136/CANST
 "Inception"/"Drama"/Wednesday, January 15, 2025/Friday, January 17, 2025/148/CANST
-
+"Pulp Fiction"/"Action"/Wednesday, January 15, 2025/Wednesday, January 15, 2025/154/CANST

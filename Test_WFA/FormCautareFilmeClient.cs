@@ -27,45 +27,44 @@ namespace Test_WFA
         {
             string user = textBoxUsername.Text.Trim();
             listBoxReservations.Items.Clear();
-            bool ok = false;
 
-            if (File.Exists(userpath))
+            try
             {
+                if (!File.Exists(userpath))
+                {
+                    MessageBox.Show("Fișierul de utilizatori nu există!", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 var utilizatori = File.ReadLines(userpath);
-                foreach (var line in utilizatori)
-                {
-                    var splitLine = line.Split('/');
-                    if (splitLine.Length == 3 && splitLine[0] == user)
-                    {
-                        ok = true;
-                        break;
-                    }
-                }
-            }
+                bool userFound = utilizatori.Any(line => line.Split('/')[0] == user);
 
-            if (ok)
-            {
-                if (File.Exists(rezervariPath))
+                if (!userFound)
                 {
-                    var rezervari = File.ReadLines(rezervariPath);
-                    foreach (var line in rezervari)
-                    {
-                        var splitLine = line.Split('/');
-                        if (splitLine.Length >= 1 && splitLine[5] == user)
-                        {
-                            string reservation = $"Film: {splitLine[0]}, Tip: {splitLine[1]},  Inceput rezervare: {splitLine[2]}, An: {splitLine[3]}";
-                            listBoxReservations.Items.Add(reservation);
-                        }
-                    }
+                    MessageBox.Show("Utilizatorul nu a fost găsit!", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
-                else
+
+                if (!File.Exists(rezervariPath))
                 {
                     MessageBox.Show("Fișierul de rezervări nu există!", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                var rezervari = File.ReadLines(rezervariPath);
+                foreach (var line in rezervari)
+                {
+                    var splitLine = line.Split('/');
+                    if (splitLine.Length >= 6 && splitLine[5] == user)
+                    {
+                        string reservation = $"Film: {splitLine[0]}, Tip: {splitLine[1]}, Inceput rezervare: {splitLine[2]}, An: {splitLine[3]}";
+                        listBoxReservations.Items.Add(reservation);
+                    }
                 }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Utilizatorul nu a fost găsit!", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"A apărut o eroare: {ex.Message}", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

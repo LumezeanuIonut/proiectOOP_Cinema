@@ -46,7 +46,6 @@ namespace Test_WFA
 
             if (ok)
             {
-                
                 int sumaTotalaClient = 0;
 
                 if (File.Exists(rezervariPath))
@@ -55,7 +54,7 @@ namespace Test_WFA
                     foreach (var line in rezervari)
                     {
                         var splitLine = line.Split('/');
-                        if (splitLine.Length >= 1 && splitLine[5] == user)
+                        if (splitLine.Length >= 6 && splitLine[5] == user)
                         {
                             if (int.TryParse(splitLine[4], out int pretFinal))
                             {
@@ -82,7 +81,6 @@ namespace Test_WFA
                 File.WriteAllText(curentPath, user);
             }
         }
-
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
