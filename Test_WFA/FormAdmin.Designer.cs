@@ -77,6 +77,7 @@
             this.remClientButton.TabIndex = 3;
             this.remClientButton.Text = "Stergere client";
             this.remClientButton.UseVisualStyleBackColor = true;
+            this.remClientButton.Click += new System.EventHandler(this.remClientButton_Click);
             // 
             // TotRezHistButton
             // 

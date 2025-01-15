@@ -13,14 +13,20 @@ namespace Test_WFA
 {
     public partial class FormAdmin : Form
     {
-        public FormAdmin()
+        private string _username;
+        private string _password;
+
+        public FormAdmin(string username, string password)
         {
             InitializeComponent();
+            _username = username;
+            _password = password;
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            FormCautareFilmeClient formCautareFilmeClient = new FormCautareFilmeClient();
+            formCautareFilmeClient.Show();
         }
 
         private void FormAdmin_Load(object sender, EventArgs e)
@@ -30,7 +36,8 @@ namespace Test_WFA
 
         private void addFilmButton_Click(object sender, EventArgs e)
         {
-
+          //  Administrator administrator = new Administrator('A', _username, _password);
+            // Add logic to handle the administrator object
         }
 
         private void totWinButton_Click(object sender, EventArgs e)
@@ -80,5 +87,11 @@ namespace Test_WFA
         {
 
         }
+
+        private void remClientButton_Click(object sender, EventArgs e)
+        {
+           
+        }
+    
     }
 }
