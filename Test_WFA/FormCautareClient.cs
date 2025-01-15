@@ -35,7 +35,7 @@ namespace Test_WFA
                 var utilizatori = File.ReadLines(userPath);
                 foreach (var line in utilizatori)
                 {
-                    var splitLine = line.Split(',');
+                    var splitLine = line.Split('/');
                     if (splitLine.Length == 3 && splitLine[0] == user)
                     {
                         ok = true;
@@ -54,7 +54,7 @@ namespace Test_WFA
                     var rezervari = File.ReadLines(rezervariPath);
                     foreach (var line in rezervari)
                     {
-                        var splitLine = line.Split(',');
+                        var splitLine = line.Split('/');
                         if (splitLine.Length >= 1 && splitLine[9] == user)
                         {
                             if (int.TryParse(splitLine[8], out int pretFinal))

@@ -10,8 +10,8 @@ namespace Test_WFA
 {
     public partial class FormCautareFilmeClient : Form
     {
-        private string rezervariPath = @"C:\Users\Andro\Source\Repos\proiectOOP_Cinema44\Test_WFA\TxtFiles\Rezervari.txt";
-        private string userpath = @"C:\Users\Andro\Source\Repos\proiectOOP_Cinema44\Test_WFA\TxtFiles\User.txt";
+        private string rezervariPath = @"C:\Users\40767\Desktop\an2\poo\OOP_Project_Cinema\Test_WFA\TxtFiles\Rezervari.txt";
+        private string userpath = @"C:\Users\40767\Desktop\an2\poo\OOP_Project_Cinema\Test_WFA\TxtFiles\User.txt";
 
         public FormCautareFilmeClient()
         {
@@ -34,7 +34,7 @@ namespace Test_WFA
                 var utilizatori = File.ReadLines(userpath);
                 foreach (var line in utilizatori)
                 {
-                    var splitLine = line.Split(',');
+                    var splitLine = line.Split('/');
                     if (splitLine.Length == 3 && splitLine[0] == user)
                     {
                         ok = true;

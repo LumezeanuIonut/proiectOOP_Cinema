@@ -42,7 +42,7 @@ namespace Test_WFA
 
         private void totWinButton_Click(object sender, EventArgs e)
         {
-            string pathSumaTotala = @"C:\Users\Andro\Source\Repos\proiectOOP_Cinema44\Test_WFA\TxtFiles\SumaVenituriTotale.txt";
+            string pathSumaTotala = @"C:\Users\40767\Desktop\an2\poo\OOP_Project_Cinema\Test_WFA\TxtFiles\SumaVenituriTotale.txt.txt";
             int sumaTotala = 0;
 
             try
@@ -97,6 +97,18 @@ namespace Test_WFA
         {
             FormCautareFilme_total_ formCautareFilmeTotal = new FormCautareFilme_total_();
             formCautareFilmeTotal.Show();
+        }
+
+        private void stergereClientButton_Click(object sender, EventArgs e)
+        {
+            FormRemoveClient remClient = new FormRemoveClient();
+            remClient.Show();
+        }
+
+        private void modify_button_Click(object sender, EventArgs e)
+        {
+            FormModificareIntervalRezervare modintrez = new FormModificareIntervalRezervare();
+            modintrez.Show();
         }
     }
 }

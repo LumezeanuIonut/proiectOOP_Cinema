@@ -1,8 +1,9 @@
-"The Godfather","Francis Ford Coppola","Action",1972,175
-"Pulp Fiction","Quentin Tarantino","Action",1994,154
-"The Dark Knight","Christopher Nolan","Action",2008,152
-"Inception","Christopher Nolan","Drama",2010,148
-"Fight Club","David Fincher","Drama",1999,139
-"Forrest Gump","Robert Zemeckis","Drama",1994,142
-"The Matrix","Lana Wachowski","Drama",1999,136
-"Goodfellas","Martin Scorsese","Drama",1990,146
+"The Godfather"/"Francis Ford Coppola"/"Action"/1972/175
+"Pulp Fiction"/"Quentin Tarantino"/"Action"/1994/154
+"The Dark Knight"/"Christopher Nolan"/"Action"/2008/152
+"Schindler's List"/"Steven Spielberg"/"Action"/1993/195
+"Inception"/"Christopher Nolan"/"Drama"/2010/148
+"Fight Club"/"David Fincher"/"Drama"/1999/139
+"Forrest Gump"/"Robert Zemeckis"/"Drama"/1994/142
+"The Matrix"/"Lana Wachowski"/"Drama"/1999/136
+"Goodfellas"/"Martin Scorsese"/"Drama"/1990/146

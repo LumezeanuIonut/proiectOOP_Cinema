@@ -14,7 +14,7 @@ namespace Test_WFA
 {
     public partial class FormCreareUtilizator : Form
     {
-        string userPath = @"C:\Users\Andro\Source\Repos\proiectOOP_Cinema44\Test_WFA\TxtFiles\User.txt";
+        string userPath = @"C:\Users\40767\Desktop\an2\poo\OOP_Project_Cinema\Test_WFA\TxtFiles\User.txt";
         public string tip { get; set; }
         public FormCreareUtilizator(string _tip)
         {

@@ -107,6 +107,12 @@
     <Compile Include="FormCreareUtilizator.Designer.cs">
       <DependentUpon>FormCreareUtilizator.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormModificareIntervalRezervare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModificareIntervalRezervare.Designer.cs">
+      <DependentUpon>FormModificareIntervalRezervare.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormModificareRez.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCreareUtilizator.resx">
       <DependentUpon>FormCreareUtilizator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModificareIntervalRezervare.resx">
+      <DependentUpon>FormModificareIntervalRezervare.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormModificareRez.resx">
       <DependentUpon>FormModificareRez.cs</DependentUpon>
