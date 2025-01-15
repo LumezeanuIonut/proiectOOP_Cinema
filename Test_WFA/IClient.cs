@@ -9,7 +9,7 @@ namespace Test_WFA
     internal interface IClient
     {
         string Cod { get; set; }
-        List<IstoricRezervari> IstoricRezervari { get; set; }
+        List<IstoricRezervari> IstoricRezervare { get; }
 
         void CrRezervare(Film film, DateTime InceputRezervaer, DateTime SfarsitRezervare);
         void ModRezervare(Film film, DateTime InceputNouaRezervare, DateTime SfarsitNouaRezervare);
