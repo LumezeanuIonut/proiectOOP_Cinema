@@ -13,9 +13,9 @@ namespace Test_WFA
 {
     public partial class FormRezervare : Form 
     {
-        private string curentPath = @"C:\Users\40767\Desktop\an2\poo\OOP_Project_Cinema\Test_WFA\TxtFiles\LogareCurenta.txt";
-        string rezervariPath = @"C:\Users\40767\Desktop\an2\poo\OOP_Project_Cinema\Test_WFA\TxtFiles\Rezervari.txt";
-        string filmPath = @"C:\Users\40767\Desktop\an2\poo\OOP_Project_Cinema\Test_WFA\TxtFiles\Filme.txt";
+        private string curentPath = @"C:\Users\Andro\Source\Repos\proiectOOP_Cinema44\Test_WFA\TxtFiles\LogareCurenta.txt";
+        string rezervariPath = @"C:\Users\Andro\Source\Repos\proiectOOP_Cinema44\Test_WFA\TxtFiles\Rezervari.txt";
+        string filmPath = @"C:\Users\Andro\Source\Repos\proiectOOP_Cinema44\Test_WFA\TxtFiles\Filme.txt";
 
         public FormRezervare()
         {
@@ -51,8 +51,8 @@ namespace Test_WFA
 
                     string logCurent = File.ReadAllText(curentPath);
                     rezervare1.Afisare_rezervare();
-                        sw.WriteLine(film.Titlu + '/' + film.Gen + '/' + Convert.ToString(rezervare1.inceputRezervare) + '/' + Convert.ToString(rezervare1.sfarsitRezervare) + '/' + Convert.ToString(film.Durata) + '/' + logCurent);
-                        rezervare1.Calculator_Castiguri_totale();
+                    rezervare1.Calculator_Castiguri_totale();
+                    sw.WriteLine(film.Titlu + '/' + film.Gen + '/' + Convert.ToString(rezervare1.inceputRezervare) + '/' + Convert.ToString(rezervare1.sfarsitRezervare) + '/' + Convert.ToString(film.Durata) + '/' + logCurent);
                         
                 }
             }

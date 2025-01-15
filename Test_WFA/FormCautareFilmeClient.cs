@@ -10,8 +10,8 @@ namespace Test_WFA
 {
     public partial class FormCautareFilmeClient : Form
     {
-        private string rezervariPath = @"C:\Users\40767\Desktop\an2\poo\OOP_Project_Cinema\Test_WFA\TxtFiles\Rezervari.txt";
-        private string userpath = @"C:\Users\40767\Desktop\an2\poo\OOP_Project_Cinema\Test_WFA\TxtFiles\User.txt";
+        private string rezervariPath = @"C:\Users\Andro\Source\Repos\proiectOOP_Cinema44\Test_WFA\TxtFiles\Rezervari.txt";
+        private string userpath = @"C:\Users\Andro\Source\Repos\proiectOOP_Cinema44\Test_WFA\TxtFiles\User.txt";
 
         public FormCautareFilmeClient()
         {
@@ -50,10 +50,10 @@ namespace Test_WFA
                     var rezervari = File.ReadLines(rezervariPath);
                     foreach (var line in rezervari)
                     {
-                        var splitLine = line.Split(',');
-                        if (splitLine.Length >= 1 && splitLine[9] == user)
+                        var splitLine = line.Split('/');
+                        if (splitLine.Length >= 1 && splitLine[5] == user)
                         {
-                            string reservation = $"Film: {splitLine[0]}, Tip: {splitLine[1]}, Zi: {splitLine[2]},  Inceput rezervare: {splitLine[3]}, An: {splitLine[4]}";
+                            string reservation = $"Film: {splitLine[0]}, Tip: {splitLine[1]},  Inceput rezervare: {splitLine[2]}, An: {splitLine[3]}";
                             listBoxReservations.Items.Add(reservation);
                         }
                     }
@@ -73,7 +73,7 @@ namespace Test_WFA
         {
             if (File.Exists(userpath))
             {
-                var lines = File.ReadLines(userpath).Select(line => line.Split(',')[0]).ToArray();
+                var lines = File.ReadLines(userpath).Select(line => line.Split('/')[0]).ToArray();
 
                 AutoCompleteStringCollection autoCompleteData = new AutoCompleteStringCollection();
                 autoCompleteData.AddRange(lines);

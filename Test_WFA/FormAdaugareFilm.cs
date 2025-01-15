@@ -36,7 +36,7 @@ namespace Test_WFA
                 return;
             }
 
-            string newFilm = $"\"{filmName}\",\"{director}\",\"{Tip}\",{year},{price}";
+            string newFilm = $"\"{filmName}\"/\"{director}\"/\"{Tip}\"/{year}/{price}";
 
             try
             {

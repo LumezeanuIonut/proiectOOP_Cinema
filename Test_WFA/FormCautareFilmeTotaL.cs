@@ -10,7 +10,7 @@ namespace Test_WFA
 {
     public partial class FormCautareFilme_total_ : Form
     {
-        private string rezervariPath = @"C:\Users\40767\Desktop\an2\poo\OOP_Project_Cinema\Test_WFA\TxtFiles\Rezervari.txt";
+        private string rezervariPath = @"C:\Users\Andro\Source\Repos\proiectOOP_Cinema44\Test_WFA\TxtFiles\Rezervari.txt";
 
         public FormCautareFilme_total_()
         {
@@ -34,7 +34,7 @@ namespace Test_WFA
                     var splitLine = line.Split('/');
                     if (splitLine.Length >= 5)
                     {
-                        string reservation = $"User: {splitLine[9]}, Film: {splitLine[0]}, Tip:{splitLine[1]}, Zi: {splitLine[2]}, Inceput: {splitLine[3]}, An: {splitLine[4]},Pret: {splitLine[8]} ";
+                        string reservation = $"User: {splitLine[5]}, Film: {splitLine[0]}, Tip:{splitLine[1]},  Inceput: {splitLine[3]},Pret: {splitLine[4]} ";
                         listBoxReservations.Items.Add(reservation);
                     }
                 }

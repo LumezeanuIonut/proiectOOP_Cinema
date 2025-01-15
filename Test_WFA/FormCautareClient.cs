@@ -10,10 +10,10 @@ namespace Test_WFA
 {
     public partial class FormCautareClient : Form
     {
-        private string curentPath = @"C:\Users\40767\Desktop\an2\poo\OOP_Project_Cinema\Test_WFA\TxtFiles\LogareCurenta.txt";
-        string userPath = @"C:\Users\40767\Desktop\an2\poo\OOP_Project_Cinema\Test_WFA\TxtFiles\User.txt";
-        string rezervariPath = @"C:\Users\40767\Desktop\an2\poo\OOP_Project_Cinema\Test_WFA\TxtFiles\Rezervari.txt";
-        string filmPath = @"C:\Users\40767\Desktop\an2\poo\OOP_Project_Cinema\Test_WFA\TxtFiles\Filme.txt";
+        private string curentPath = @"C:\Users\Andro\Source\Repos\proiectOOP_Cinema44\Test_WFA\TxtFiles\LogareCurenta.txt";
+        string userPath = @"C:\Users\Andro\Source\Repos\proiectOOP_Cinema44\Test_WFA\TxtFiles\User.txt";
+        string rezervariPath = @"C:\Users\Andro\Source\Repos\proiectOOP_Cinema44\Test_WFA\TxtFiles\Rezervari.txt";
+        string filmPath = @"C:\Users\Andro\Source\Repos\proiectOOP_Cinema44\Test_WFA\TxtFiles\Filme.txt";
 
         public FormCautareClient()
         {
@@ -55,9 +55,9 @@ namespace Test_WFA
                     foreach (var line in rezervari)
                     {
                         var splitLine = line.Split('/');
-                        if (splitLine.Length >= 1 && splitLine[9] == user)
+                        if (splitLine.Length >= 1 && splitLine[5] == user)
                         {
-                            if (int.TryParse(splitLine[8], out int pretFinal))
+                            if (int.TryParse(splitLine[4], out int pretFinal))
                             {
                                 sumaTotalaClient += pretFinal;
                             }

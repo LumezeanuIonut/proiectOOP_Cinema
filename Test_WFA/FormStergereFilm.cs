@@ -33,7 +33,7 @@ namespace Test_WFA
 
                 for (int i = 0; i < lines.Count; i++)
                 {
-                    var splitLine = lines[i].Split(',');
+                    var splitLine = lines[i].Split('/');
                     if (splitLine.Length > 0 && splitLine[0].Equals(filmToDelete, StringComparison.OrdinalIgnoreCase))
                     {
                         lines.RemoveAt(i);
@@ -62,7 +62,7 @@ namespace Test_WFA
         {
             if (File.Exists(filmPath))
             {
-                var lines = File.ReadLines(filmPath).Select(line => line.Split(',')[0]).ToArray();
+                var lines = File.ReadLines(filmPath).Select(line => line.Split('/')[0]).ToArray();
 
                 AutoCompleteStringCollection autoCompleteData = new AutoCompleteStringCollection();
                 autoCompleteData.AddRange(lines);

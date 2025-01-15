@@ -42,7 +42,7 @@ namespace Test_WFA
 
         private void totWinButton_Click(object sender, EventArgs e)
         {
-            string pathSumaTotala = @"C:\Users\40767\Desktop\an2\poo\OOP_Project_Cinema\Test_WFA\TxtFiles\SumaVenituriTotale.txt.txt";
+            string pathSumaTotala = @"C:\Users\Andro\Source\Repos\proiectOOP_Cinema44\Test_WFA\TxtFiles\SumaVenituriTotale.txt";
             int sumaTotala = 0;
 
             try

@@ -82,14 +82,14 @@ namespace Test_WFA
 
         public int Pret_Final()
         {
-            PretFinal =PRET_BAZA * durata + Calculator_taxe();
+            PretFinal = PRET_BAZA  + Calculator_taxe();
             return PretFinal;
         }
         //Calculam suma totala a rezervarilor
         public void Calculator_Castiguri_totale()
         {
 
-            string pathSumaTotala = @"C:\Users\40767\Desktop\an2\poo\OOP_Project_Cinema\Test_WFA\TxtFiles\SumaVenituriTotale.txt";
+            string pathSumaTotala = @"C:\Users\Andro\Source\Repos\proiectOOP_Cinema44\Test_WFA\TxtFiles\SumaVenituriTotale.txt";
             int suma = Pret_Final();
             int sumaTxt = 0;
 
