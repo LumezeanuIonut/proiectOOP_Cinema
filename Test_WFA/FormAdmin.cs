@@ -73,8 +73,7 @@ namespace Test_WFA
 
         private void adaugareAdmin_button_ClickC(object sender, EventArgs e)
         {
-            FormCreareUtilizator creareUser = new FormCreareUtilizator("A");
-            creareUser.Show();
+            
         }
 
         private void clientWinButton_Click(object sender, EventArgs e)
@@ -92,6 +91,11 @@ namespace Test_WFA
         {
            
         }
-    
+
+        private void TotRezHistButton_Click(object sender, EventArgs e)
+        {
+            FormCautareFilme_total_ formCautareFilmeTotal = new FormCautareFilme_total_();
+            formCautareFilmeTotal.Show();
+        }
     }
 }

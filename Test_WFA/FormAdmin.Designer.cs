@@ -87,6 +87,7 @@
             this.TotRezHistButton.TabIndex = 4;
             this.TotRezHistButton.Text = "Vizualizare istoric inchirieri filme (per total)";
             this.TotRezHistButton.UseVisualStyleBackColor = true;
+            this.TotRezHistButton.Click += new System.EventHandler(this.TotRezHistButton_Click);
             // 
             // clientRezHistButton
             // 
