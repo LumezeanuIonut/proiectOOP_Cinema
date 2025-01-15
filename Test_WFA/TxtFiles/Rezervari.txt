@@ -1,3 +1,4 @@
-"The Matrix","Drama",Tuesday, January 14, 2025,Tuesday, January 14, 2025,136,CANST
-"Inception","Drama",Tuesday, January 14, 2025,Tuesday, January 14, 2025,148,CANST
-"Goodfellas","Drama",Tuesday, January 14, 2025,Tuesday, January 14, 2025,146,CANST
+
+"The Godfather"/"Action"/miercuri, 15 ianuarie 2025/miercuri, 15 ianuarie 2025/175/CMit
+"Fight Club"/"Drama"/vineri, 10 ianuarie 2025/sâmbătă, 11 ianuarie 2025/139/CMit
+

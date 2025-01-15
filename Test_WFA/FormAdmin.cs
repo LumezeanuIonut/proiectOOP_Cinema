@@ -98,10 +98,16 @@ namespace Test_WFA
             formCautareFilmeTotal.Show();
         }
 
-        private void remClientButton_Click(object sender, EventArgs e)
+        private void stergereClientButton_Click(object sender, EventArgs e)
         {
             FormRemoveClient remClient = new FormRemoveClient();
             remClient.Show();
+        }
+
+        private void modify_button_Click(object sender, EventArgs e)
+        {
+            FormModificareIntervalRezervare modintrez = new FormModificareIntervalRezervare();
+            modintrez.Show();
         }
     }
 }

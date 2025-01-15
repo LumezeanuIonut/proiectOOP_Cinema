@@ -67,7 +67,7 @@
             this.remClientButton.TabIndex = 3;
             this.remClientButton.Text = "Stergere client";
             this.remClientButton.UseVisualStyleBackColor = true;
-            this.remClientButton.Click += new System.EventHandler(this.remClientButton_Click);
+            this.remClientButton.Click += new System.EventHandler(this.stergereClientButton_Click);
             // 
             // TotRezHistButton
             // 
@@ -127,6 +127,7 @@
             this.modify_button.TabIndex = 9;
             this.modify_button.Text = "Modificare interval rezervari";
             this.modify_button.UseVisualStyleBackColor = true;
+            this.modify_button.Click += new System.EventHandler(this.modify_button_Click);
             // 
             // FormAdmin
             // 

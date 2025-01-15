@@ -89,7 +89,7 @@ namespace Test_WFA
         public void Calculator_Castiguri_totale()
         {
 
-            string pathSumaTotala = @"C:\Users\Andro\Source\Repos\proiectOOP_Cinema44\Test_WFA\TxtFiles\SumaVenituriTotale.txt";
+            string pathSumaTotala = @"C:\Users\40767\Desktop\an2\poo\OOP_Project_Cinema\Test_WFA\TxtFiles\SumaVenituriTotale.txt";
             int suma = Pret_Final();
             int sumaTxt = 0;
 

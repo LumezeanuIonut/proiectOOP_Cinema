@@ -13,8 +13,8 @@ namespace Test_WFA
 {
     public partial class FormUserLog : Form
     {
-        private string curentPath = @"C:\Users\Andro\Source\Repos\proiectOOP_Cinema44\Test_WFA\TxtFiles\LogareCurenta.txt";
-        string userPath = @"C:\Users\Andro\Source\Repos\proiectOOP_Cinema44\Test_WFA\TxtFiles\User.txt";
+        private string curentPath = @"C:\Users\40767\Desktop\an2\poo\OOP_Project_Cinema\Test_WFA\TxtFiles\LogareCurenta.txt";
+        string userPath = @"C:\Users\40767\Desktop\an2\poo\OOP_Project_Cinema\Test_WFA\TxtFiles\User.txt";
         public FormUserLog()
         {
             InitializeComponent();
@@ -44,7 +44,7 @@ namespace Test_WFA
                 var utilizatori = File.ReadLines(userPath);
                 foreach (var line in utilizatori)
                 {
-                    var splitLine = line.Split(',');
+                    var splitLine = line.Split('/');
                     if (splitLine.Length == 3)
                     {
                         User = splitLine[0];

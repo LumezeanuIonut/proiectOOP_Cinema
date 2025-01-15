@@ -74,7 +74,7 @@ namespace Test_WFA
             string anLansare = "";  
             string durata = "";
 
-            var splitLine = modif_tb.Text.Split(',');
+            var splitLine = modif_tb.Text.Split('/');
             if (splitLine.Length == 5)
             {
                 titlu = splitLine[0];
@@ -90,7 +90,7 @@ namespace Test_WFA
                 //se inroduce intr-o variabila userul curent 
 
                 string logCurent = File.ReadAllText(curentPath);
-                string rezervareNoua = titlu + ',' + gen + ',' + modrez_dtp1.Text +',' + modrez_dtp2.Text + ',' + durata + ',' + logCurent;
+                string rezervareNoua = titlu + '/' + gen + '/' + modrez_dtp1.Text +'/' + modrez_dtp2.Text + '/' + durata + '/' + logCurent;
                 Rezervari rezervare1 = new Rezervari(titlu, gen, modrez_dtp1.Text, modrez_dtp2.Text, Convert.ToInt32(durata));
                 if (rezervariText.Contains(modRez_tb.Text))
                 {
