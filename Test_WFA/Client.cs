@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Test_WFA
 {
-    class Client : Utilizator
+    class Client : Utilizator,IClient
     {
         private string _cod;
         private static int _nrCod = 1;
