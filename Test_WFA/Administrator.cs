@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Test_WFA
 {
-    class Administrator : Utilizator
+    class Administrator : Utilizator,IAdministrator
     {
         private List<Film> _film;
         public Administrator(string Tip, string User, string Parola, string Username) : base(Tip, User, Parola, Username)

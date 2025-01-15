@@ -30,13 +30,13 @@
         {
             this.addFilmButton = new System.Windows.Forms.Button();
             this.remFilmButton = new System.Windows.Forms.Button();
-            this.modifyButton = new System.Windows.Forms.Button();
             this.remClientButton = new System.Windows.Forms.Button();
             this.TotRezHistButton = new System.Windows.Forms.Button();
             this.clientRezHistButton = new System.Windows.Forms.Button();
             this.totWinButton = new System.Windows.Forms.Button();
             this.clientWinButton = new System.Windows.Forms.Button();
             this.adaugareAdmin_button = new System.Windows.Forms.Button();
+            this.modify_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // addFilmButton
@@ -59,16 +59,6 @@
             this.remFilmButton.UseVisualStyleBackColor = true;
             this.remFilmButton.Click += new System.EventHandler(this.remFilmButton_Click);
             // 
-            // modifyButton
-            // 
-            this.modifyButton.Location = new System.Drawing.Point(35, 177);
-            this.modifyButton.Name = "modifyButton";
-            this.modifyButton.Size = new System.Drawing.Size(730, 23);
-            this.modifyButton.TabIndex = 2;
-            this.modifyButton.Text = "Modificare interval rezervare film ";
-            this.modifyButton.UseVisualStyleBackColor = true;
-            this.modifyButton.Click += new System.EventHandler(this.adaugareAdmin_button_ClickC);
-            // 
             // remClientButton
             // 
             this.remClientButton.Location = new System.Drawing.Point(35, 222);
@@ -77,6 +67,7 @@
             this.remClientButton.TabIndex = 3;
             this.remClientButton.Text = "Stergere client";
             this.remClientButton.UseVisualStyleBackColor = true;
+            this.remClientButton.Click += new System.EventHandler(this.remClientButton_Click);
             // 
             // TotRezHistButton
             // 
@@ -127,18 +118,27 @@
             this.adaugareAdmin_button.UseVisualStyleBackColor = true;
             this.adaugareAdmin_button.Click += new System.EventHandler(this.adaugareAdmin_button_ClickC);
             // 
+            // modify_button
+            // 
+            this.modify_button.Location = new System.Drawing.Point(35, 176);
+            this.modify_button.Name = "modify_button";
+            this.modify_button.Size = new System.Drawing.Size(730, 23);
+            this.modify_button.TabIndex = 9;
+            this.modify_button.Text = "Modificare interval rezervari";
+            this.modify_button.UseVisualStyleBackColor = true;
+            // 
             // FormAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(836, 484);
+            this.Controls.Add(this.modify_button);
             this.Controls.Add(this.adaugareAdmin_button);
             this.Controls.Add(this.clientWinButton);
             this.Controls.Add(this.totWinButton);
             this.Controls.Add(this.clientRezHistButton);
             this.Controls.Add(this.TotRezHistButton);
             this.Controls.Add(this.remClientButton);
-            this.Controls.Add(this.modifyButton);
             this.Controls.Add(this.remFilmButton);
             this.Controls.Add(this.addFilmButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -154,12 +154,12 @@
 
         private System.Windows.Forms.Button addFilmButton;
         private System.Windows.Forms.Button remFilmButton;
-        private System.Windows.Forms.Button modifyButton;
         private System.Windows.Forms.Button remClientButton;
         private System.Windows.Forms.Button TotRezHistButton;
         private System.Windows.Forms.Button clientRezHistButton;
         private System.Windows.Forms.Button totWinButton;
         private System.Windows.Forms.Button clientWinButton;
         private System.Windows.Forms.Button adaugareAdmin_button;
+        private System.Windows.Forms.Button modify_button;
     }
 }

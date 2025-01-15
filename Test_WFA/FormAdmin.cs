@@ -35,7 +35,7 @@ namespace Test_WFA
 
         private void totWinButton_Click(object sender, EventArgs e)
         {
-            string pathSumaTotala = @"C:\Users\Andro\Source\Repos\proiectOOP_Cinema44\Test_WFA\TxtFiles\SumaVenituriTotale.txt";
+            string pathSumaTotala = @"C:\Users\40767\Desktop\an2\poo\OOP_Project_Cinema\Test_WFA\TxtFiles\SumaVenituriTotale.txt.txt";
             int sumaTotala = 0;
 
             try
@@ -79,6 +79,12 @@ namespace Test_WFA
         private void remFilmButton_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void remClientButton_Click(object sender, EventArgs e)
+        {
+            FormRemoveClient remClient = new FormRemoveClient();
+            remClient.Show();
         }
     }
 }

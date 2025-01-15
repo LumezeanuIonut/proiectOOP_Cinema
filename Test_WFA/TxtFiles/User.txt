@@ -1,3 +1,6 @@
 ALUIO,parola,Lumezeanu Ionut 
 CANST,parola,Andronache Stefan 
 CMit,parola,Mitar Alin
+AAnd,parola,Andronache Stefan
+AMit,parola,Mitar Alin
+ALum,parola,Lumezeanu Ionut

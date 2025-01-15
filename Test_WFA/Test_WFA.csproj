@@ -96,6 +96,12 @@
     <Compile Include="FormModificareRez.Designer.cs">
       <DependentUpon>FormModificareRez.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormRemoveClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRemoveClient.Designer.cs">
+      <DependentUpon>FormRemoveClient.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormRezervare.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +142,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormModificareRez.resx">
       <DependentUpon>FormModificareRez.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRemoveClient.resx">
+      <DependentUpon>FormRemoveClient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRezervare.resx">
       <DependentUpon>FormRezervare.cs</DependentUpon>
