@@ -36,8 +36,8 @@ namespace Test_WFA
 
         private void addFilmButton_Click(object sender, EventArgs e)
         {
-          //  Administrator administrator = new Administrator('A', _username, _password);
-            // Add logic to handle the administrator object
+            FormAdaugareFilm formAdaugareFilm = new FormAdaugareFilm();
+            formAdaugareFilm.Show();
         }
 
         private void totWinButton_Click(object sender, EventArgs e)
