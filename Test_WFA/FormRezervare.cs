@@ -11,7 +11,7 @@ using System.IO;
 
 namespace Test_WFA
 {
-    public partial class FormRezervare : Form
+    public partial class FormRezervare : Form 
     {
         private string curentPath = @"C:\Users\Andro\Source\Repos\proiectOOP_Cinema44\Test_WFA\TxtFiles\LogareCurenta.txt";
         string rezervariPath = @"C:\Users\Andro\Source\Repos\proiectOOP_Cinema44\Test_WFA\TxtFiles\Rezervari.txt";

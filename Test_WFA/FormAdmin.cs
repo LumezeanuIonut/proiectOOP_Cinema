@@ -13,14 +13,20 @@ namespace Test_WFA
 {
     public partial class FormAdmin : Form
     {
-        public FormAdmin()
+        private string _username;
+        private string _password;
+
+        public FormAdmin(string username, string password)
         {
             InitializeComponent();
+            _username = username;
+            _password = password;
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            FormCautareFilmeClient formCautareFilmeClient = new FormCautareFilmeClient();
+            formCautareFilmeClient.Show();
         }
 
         private void FormAdmin_Load(object sender, EventArgs e)
@@ -30,12 +36,13 @@ namespace Test_WFA
 
         private void addFilmButton_Click(object sender, EventArgs e)
         {
-
+          //  Administrator administrator = new Administrator('A', _username, _password);
+            // Add logic to handle the administrator object
         }
 
         private void totWinButton_Click(object sender, EventArgs e)
         {
-            string pathSumaTotala = @"C:\Users\40767\Desktop\an2\poo\OOP_Project_Cinema\Test_WFA\TxtFiles\SumaVenituriTotale.txt.txt";
+            string pathSumaTotala = @"C:\Users\Andro\Source\Repos\proiectOOP_Cinema44\Test_WFA\TxtFiles\SumaVenituriTotale.txt";
             int sumaTotala = 0;
 
             try
@@ -66,8 +73,7 @@ namespace Test_WFA
 
         private void adaugareAdmin_button_ClickC(object sender, EventArgs e)
         {
-            FormCreareUtilizator creareUser = new FormCreareUtilizator("A");
-            creareUser.Show();
+            
         }
 
         private void clientWinButton_Click(object sender, EventArgs e)
@@ -83,8 +89,13 @@ namespace Test_WFA
 
         private void remClientButton_Click(object sender, EventArgs e)
         {
-            FormRemoveClient remClient = new FormRemoveClient();
-            remClient.Show();
+           
+        }
+
+        private void TotRezHistButton_Click(object sender, EventArgs e)
+        {
+            FormCautareFilme_total_ formCautareFilmeTotal = new FormCautareFilme_total_();
+            formCautareFilmeTotal.Show();
         }
     }
 }
