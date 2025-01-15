@@ -119,6 +119,12 @@
     <Compile Include="FormRezervare.Designer.cs">
       <DependentUpon>FormRezervare.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormStergereFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStergereFilm.Designer.cs">
+      <DependentUpon>FormStergereFilm.cs</DependentUpon>
+    </Compile>
     <Compile Include="IAdministator.cs" />
     <Compile Include="IClient.cs" />
     <Compile Include="IRezervari.cs" />
@@ -165,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormRezervare.resx">
       <DependentUpon>FormRezervare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStergereFilm.resx">
+      <DependentUpon>FormStergereFilm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUserLog.resx">
       <DependentUpon>FormUserLog.cs</DependentUpon>

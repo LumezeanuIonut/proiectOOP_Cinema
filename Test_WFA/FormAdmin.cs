@@ -84,7 +84,8 @@ namespace Test_WFA
 
         private void remFilmButton_Click(object sender, EventArgs e)
         {
-
+            FormStergereFilm formStergereFilm = new FormStergereFilm();
+            formStergereFilm.Show();
         }
 
         private void remClientButton_Click(object sender, EventArgs e)
